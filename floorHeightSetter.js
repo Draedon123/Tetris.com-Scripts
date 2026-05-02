@@ -20,7 +20,8 @@ javascript: {
     for (let y = 0; y < height; y++) {
       const method = (
         game.mPieceFactory.x1870197110890883719x ??
-        game.mPieceFactory.x3045176153931957276x
+        game.mPieceFactory.x3045176153931957276x ??
+        game.mPieceFactory.x1668416205431546735x
       )?.bind(game.mPieceFactory);
 
       for (let x = 0; x < 10; x++) {
@@ -54,7 +55,7 @@ javascript: {
         return;
       }
 
-      timeout = setTimeout(setField, 500);
+      timeout = setTimeout(setField, 10);
     },
     configurable: true,
   });
