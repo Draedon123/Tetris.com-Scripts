@@ -9,5 +9,6 @@ javascript: {
 
   document.querySelector(
     "iframe[title='Tetris Game'], #gameIFrame",
-  ).contentWindow.Math.random = () => (seed === "" ? originalRandom() : seed);
+  ).contentWindow.Math.random = () =>
+    seed === "" ? originalRandom() : parseFloat(seed);
 }
