@@ -8,6 +8,7 @@ const seed = 0;
 // e60 has bagSize = 1
 const bagSize = 7;
 const numBags = 5;
+const printBagsOnNewLines = true;
 
 // Side note: tetris.com uses the MT19937 for (pseudo) random number generation
 class MersenneTwister {
@@ -181,11 +182,9 @@ class BagGenerator {
   }
 
   getBags(numBags = 1) {
-    const bags = [];
+    let bag = "";
 
     for (let i = 0; i < numBags; i++) {
-      const bag = [];
-
       for (let j = 0; j < this.bagSize; j++) {
         if (
           this.bagIndices.length === 0 ||
@@ -194,13 +193,15 @@ class BagGenerator {
           this.bagIndices = [6, 5, 4, 3, 2, 1, 0];
         }
 
-        bag.push(this._generatePiece());
+        bag += this._generatePiece();
       }
 
-      bags.push(bag);
+      if (printBagsOnNewLines) {
+        bag += "\n";
+      }
     }
 
-    return bags;
+    return bag;
   }
 
   _generatePiece() {
