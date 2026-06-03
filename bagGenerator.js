@@ -9,12 +9,7 @@ const seed = 0;
 const bagSize = 7;
 const numBags = 5;
 
-/**
- * For the technically inclined, tetris.com uses a 32-bit Mersenne Twister
- * for pseudorandom number generation. Specifically, it uses the MT19937
- * variant
- */
-
+// Side note: tetris.com uses the MT19937 for (pseudo) random number generation
 class MersenneTwister {
   static WORD_SIZE = 32;
   static RECURSION_DEGREE = 624;
