@@ -1,0 +1,4824 @@
+{
+  "metadata": {
+    "id": "defaultTPF-mobile",
+    "version@i": 1,
+    "buildNumberOverride": "PT-0317",
+    "tetrionBuildNumber": "289.01",
+    "allowDocumentUpgrade": true
+  },
+  "debug": { "enableAIPlay": false },
+  "application": {
+    "savedDataId": "defaultTPF-mobile",
+    "hockeyAppId": "",
+    "windowWidth@i": 428,
+    "windowHeight@i": 640,
+    "windowTitle": "Tetris",
+    "windowColor": { "h@f": 0.0, "s@f": 0.0, "v@f": 1.0 },
+    "backgroundImage": {
+      "transform": {
+        "x@f": 0.0,
+        "y@f": 0.0,
+        "anchorX@f": 0.5,
+        "anchorY@f": 0.5
+      },
+      "style": {
+        "resource_texture": "project-Marathon/art/bg/main-background--mobile.png"
+      },
+      "scaleToWindow": true
+    },
+    "simulateTouchscreen": false,
+    "launchFullScreen": false,
+    "debugPauseToggleKey@i": 726521054,
+    "fullScreenToggleKey@i": 726521055,
+    "initialScene": "mainMenu",
+    "time": {
+      "maxDeltaTimeSEC@f": 1.0,
+      "minAvailableTimeMSEC@i": 0,
+      "minAvailableTimeMSEC-platforms": { "unitydesktop@i": 0 }
+    },
+    "UIInputMgr": {
+      "enableUIControlsNavigation": false,
+      "enableUIControlsNavigation-platforms": { "unity": true, "osx": true }
+    },
+    "analytics": {
+      "GoogleAnalytics4": { "enabled": true },
+      "GoogleUniversalAnalytics": {
+        "enabled": false,
+        "eventCategory": "Tetris Game Marathon (HTML5-mobile)"
+      }
+    },
+    "highScoreMgr": {
+      "enabled": true,
+      "numEntries@i": 5,
+      "placeholderName": "",
+      "scoreValueId": "score",
+      "validScoreRequiresSuccess": false,
+      "isHigherValueBetter": true,
+      "defaultHighScoreMax@i": 5000,
+      "defaultHighScoresDecrementValue@i": 1000
+    },
+    "platforms": {
+      "macOS": { "launchFullScreen": false },
+      "HTML5Desktop": { "css": "", "GameBG": { "resource_texture": "" } }
+    },
+    "appSupportFactory": {
+      "styles": {
+        "backgroundDimmingView": {
+          "resource_texture": "project-Marathon/art/ui/frames/box-black.png",
+          "alpha@f": 0.6
+        },
+        "menus": {
+          "menuButton": {
+            "width@f": 180.0,
+            "height@f": 52.0,
+            "frame": {
+              "textures": {
+                "texture:off-normal": {
+                  "resource_texture": "project-Marathon/art/ui/buttons/button-02-normal~inset-26~.png",
+                  "alpha@f": 1.0
+                },
+                "texture:off-hover": {
+                  "resource_texture": "project-Marathon/art/ui/buttons/button-02-hover~inset-26~.png",
+                  "alpha@f": 1.0
+                },
+                "texture:off-down": {
+                  "resource_texture": "project-Marathon/art/ui/buttons/button-02-down~inset-26~.png",
+                  "alpha@f": 1.0
+                },
+                "texture:on-normal": {
+                  "baseStyle": "menus.menuButton.frame.textures.texture:off-normal"
+                },
+                "texture:on-hover": {
+                  "baseStyle": "menus.menuButton.frame.textures.texture:off-hover"
+                },
+                "texture:on-down": {
+                  "baseStyle": "menus.menuButton.frame.textures.texture:off-down"
+                },
+                "texture:disabled": {
+                  "baseStyle": "menus.menuButton.frame.textures.texture:off-normal",
+                  "alpha@f": 0.3
+                }
+              }
+            },
+            "text": {
+              "transform": {
+                "x@f": 0.0,
+                "y@f": 0.0,
+                "anchorX@f": 0.5,
+                "anchorY@f": 0.5
+              },
+              "fonts": {
+                "font:off-normal": {
+                  "resource_font": "project-Marathon/art/fonts/AvenirNextBold18",
+                  "alpha@f": 1.0
+                },
+                "font:off-hover": {
+                  "baseStyle": "menus.menuButton.text.fonts.font:off-normal",
+                  "alpha@f": 1.0
+                },
+                "font:off-down": {
+                  "baseStyle": "menus.menuButton.text.fonts.font:off-normal",
+                  "alpha@f": 1.0
+                },
+                "font:disabled": {
+                  "baseStyle": "menus.menuButton.text.fonts.font:off-normal",
+                  "alpha@f": 0.3
+                }
+              }
+            },
+            "inputFocus": {
+              "textures": {
+                "texture:inputFocus": {
+                  "resource_texture": "project-Marathon/art/ui/buttons/button-02-inputFocus~inset-26~.png",
+                  "alpha@f": 1.0,
+                  "widthMod@f": 2.0,
+                  "heightMod@f": 2.0
+                }
+              }
+            }
+          },
+          "menuButton2": {
+            "width@f": 200.0,
+            "height@f": 60.0,
+            "frame": {
+              "textures": {
+                "texture:off-normal": {
+                  "resource_texture": "project-Marathon/art/ui/buttons/button-02b-normal~inset-26~.png",
+                  "alpha@f": 1.0
+                },
+                "texture:off-hover": {
+                  "resource_texture": "project-Marathon/art/ui/buttons/button-02b-hover~inset-26~.png",
+                  "alpha@f": 1.0
+                },
+                "texture:off-down": {
+                  "resource_texture": "project-Marathon/art/ui/buttons/button-02b-down~inset-26~.png",
+                  "alpha@f": 1.0
+                },
+                "texture:on-normal": {
+                  "baseStyle": "menus.menuButton.frame.textures.texture:off-normal"
+                },
+                "texture:on-hover": {
+                  "baseStyle": "menus.menuButton.frame.textures.texture:off-hover"
+                },
+                "texture:on-down": {
+                  "baseStyle": "menus.menuButton.frame.textures.texture:off-down"
+                },
+                "texture:disabled": {
+                  "baseStyle": "menus.menuButton.frame.textures.texture:off-normal",
+                  "alpha@f": 0.3
+                }
+              }
+            },
+            "text": {
+              "transform": {
+                "x@f": 0.0,
+                "y@f": 0.0,
+                "anchorX@f": 0.5,
+                "anchorY@f": 0.5
+              },
+              "fonts": {
+                "font:off-normal": {
+                  "resource_font": "project-Marathon/art/fonts/AvenirNextBold26",
+                  "alpha@f": 1.0
+                },
+                "font:off-hover": {
+                  "baseStyle": "menus.menuButton2.text.fonts.font:off-normal",
+                  "alpha@f": 1.0
+                },
+                "font:off-down": {
+                  "baseStyle": "menus.menuButton2.text.fonts.font:off-normal",
+                  "alpha@f": 1.0
+                },
+                "font:disabled": {
+                  "baseStyle": "menus.menuButton2.text.fonts.font:off-normal",
+                  "alpha@f": 0.3
+                }
+              }
+            },
+            "inputFocus": {
+              "textures": {
+                "texture:inputFocus": {
+                  "baseStyle": "menus.menuButton.inputFocus.textures.texture:inputFocus"
+                }
+              }
+            }
+          },
+          "menuButton3": {
+            "width@f": 70.0,
+            "height@f": 60.0,
+            "frame": {
+              "textures": {
+                "texture:off-normal": {
+                  "resource_texture": "project-Marathon/art/ui/buttons/button-02-normal~inset-26~.png",
+                  "alpha@f": 1.0
+                },
+                "texture:off-hover": {
+                  "resource_texture": "project-Marathon/art/ui/buttons/button-02-hover~inset-26~.png",
+                  "alpha@f": 1.0
+                },
+                "texture:off-down": {
+                  "resource_texture": "project-Marathon/art/ui/buttons/button-02-down~inset-26~.png",
+                  "alpha@f": 1.0
+                },
+                "texture:on-normal": {
+                  "baseStyle": "menus.menuButton.frame.textures.texture:off-normal"
+                },
+                "texture:on-hover": {
+                  "baseStyle": "menus.menuButton.frame.textures.texture:off-hover"
+                },
+                "texture:on-down": {
+                  "baseStyle": "menus.menuButton.frame.textures.texture:off-down"
+                },
+                "texture:disabled": {
+                  "baseStyle": "menus.menuButton.frame.textures.texture:off-normal",
+                  "alpha@f": 0.3
+                }
+              }
+            },
+            "inputFocus": {
+              "textures": {
+                "texture:inputFocus": {
+                  "baseStyle": "menus.menuButton.inputFocus.textures.texture:inputFocus"
+                }
+              }
+            }
+          },
+          "menuButton4": {
+            "baseStyle": "menus.menuButton2",
+            "width@f": 180.0,
+            "height@f": 52.0,
+            "text": {
+              "transform": {
+                "x@f": 0.0,
+                "y@f": 0.0,
+                "anchorX@f": 0.5,
+                "anchorY@f": 0.5
+              },
+              "fonts": {
+                "font:off-normal": {
+                  "resource_font": "project-Marathon/art/fonts/AvenirNextBold18",
+                  "alpha@f": 1.0
+                },
+                "font:off-hover": {
+                  "baseStyle": "menus.menuButton4.text.fonts.font:off-normal",
+                  "alpha@f": 1.0
+                },
+                "font:off-down": {
+                  "baseStyle": "menus.menuButton4.text.fonts.font:off-normal",
+                  "alpha@f": 1.0
+                },
+                "font:disabled": {
+                  "baseStyle": "menus.menuButton4.text.fonts.font:off-normal",
+                  "alpha@f": 0.3
+                }
+              }
+            },
+            "inputFocus": {
+              "textures": {
+                "texture:inputFocus": {
+                  "baseStyle": "menus.menuButton.inputFocus.textures.texture:inputFocus"
+                }
+              }
+            }
+          },
+          "menuButton5": {
+            "baseStyle": "menus.menuButton",
+            "width@f": 96.0,
+            "height@f": 60.0,
+            "text": {
+              "transform": {
+                "x@f": -3.0,
+                "y@f": 2.0,
+                "anchorX@f": 0.5,
+                "anchorY@f": 0.5
+              },
+              "fonts": {
+                "font:off-normal": {
+                  "resource_font": "project-Marathon/art/fonts/AvenirNextBold15",
+                  "alpha@f": 1.0
+                },
+                "font:off-hover": {
+                  "baseStyle": "menus.menuButton5.text.fonts.font:off-normal",
+                  "alpha@f": 1.0
+                },
+                "font:off-down": {
+                  "baseStyle": "menus.menuButton5.text.fonts.font:off-normal",
+                  "alpha@f": 1.0
+                },
+                "font:disabled": {
+                  "baseStyle": "menus.menuButton5.text.fonts.font:off-normal",
+                  "alpha@f": 0.3
+                }
+              }
+            }
+          },
+          "smallMenuButton": {
+            "width@f": 80.0,
+            "height@f": 20.0,
+            "frame": {
+              "textures": {
+                "texture:off-normal": {
+                  "baseStyle": "menus.menuButton.frame.textures.texture:off-normal",
+                  "resource_texture": "project-Marathon/art/ui/buttons/button-01-normal~inset-8~.png"
+                },
+                "texture:off-hover": {
+                  "baseStyle": "menus.menuButton.frame.textures.texture:off-hover",
+                  "resource_texture": "project-Marathon/art/ui/buttons/button-01-hover~inset-8~.png"
+                },
+                "texture:off-down": {
+                  "baseStyle": "menus.menuButton.frame.textures.texture:off-down",
+                  "resource_texture": "project-Marathon/art/ui/buttons/button-01-down~inset-8~.png"
+                },
+                "texture:on-normal": {
+                  "baseStyle": "menus.smallMenuButton.frame.textures.texture:off-normal"
+                },
+                "texture:on-hover": {
+                  "baseStyle": "menus.smallMenuButton.frame.textures.texture:off-hover"
+                },
+                "texture:on-down": {
+                  "baseStyle": "menus.smallMenuButton.frame.textures.texture:off-down"
+                },
+                "texture:disabled": {
+                  "baseStyle": "menus.smallMenuButton.frame.textures.texture:off-normal",
+                  "alpha@f": 0.3
+                }
+              }
+            },
+            "text": {
+              "transform": {
+                "x@f": -2.0,
+                "y@f": 2.0,
+                "anchorX@f": 0.5,
+                "anchorY@f": 0.5
+              },
+              "fonts": {
+                "font:off-normal": {
+                  "resource_font": "project-Marathon/art/fonts/AvenirNextBold15",
+                  "alpha@f": 1.0
+                },
+                "font:off-hover": {
+                  "baseStyle": "menus.smallMenuButton.text.fonts.font:off-normal"
+                },
+                "font:off-down": {
+                  "baseStyle": "menus.smallMenuButton.text.fonts.font:off-normal"
+                },
+                "font:disabled": {
+                  "baseStyle": "menus.smallMenuButton.text.fonts.font:off-normal",
+                  "alpha@f": 0.3
+                }
+              }
+            },
+            "inputFocus": {
+              "textures": {
+                "texture:inputFocus": {
+                  "resource_texture": "project-Marathon/art/ui/buttons/button-01-inputFocus~inset-8~.png",
+                  "alpha@f": 1.0,
+                  "widthMod@f": 8.0,
+                  "heightMod@f": 6.0
+                }
+              }
+            }
+          },
+          "moreGamesMenuButton": {
+            "width@f": 104.0,
+            "height@f": 70.0,
+            "frame": {
+              "textures": {
+                "texture:off-normal": {
+                  "resource_texture": "project-Marathon/art/ui/buttons/button-02b-normal~inset-26~.png",
+                  "alpha@f": 1.0
+                },
+                "texture:off-hover": {
+                  "resource_texture": "project-Marathon/art/ui/buttons/button-02b-hover~inset-26~.png",
+                  "alpha@f": 1.0
+                },
+                "texture:off-down": {
+                  "resource_texture": "project-Marathon/art/ui/buttons/button-02b-down~inset-26~.png",
+                  "alpha@f": 1.0
+                },
+                "texture:on-normal": {
+                  "baseStyle": "menus.menuButton.frame.textures.texture:off-normal"
+                },
+                "texture:on-hover": {
+                  "baseStyle": "menus.menuButton.frame.textures.texture:off-hover"
+                },
+                "texture:on-down": {
+                  "baseStyle": "menus.menuButton.frame.textures.texture:off-down"
+                },
+                "texture:disabled": {
+                  "baseStyle": "menus.menuButton.frame.textures.texture:off-normal",
+                  "alpha@f": 0.3
+                }
+              }
+            },
+            "text": {
+              "transform": {
+                "x@f": -3.0,
+                "y@f": 1.0,
+                "anchorX@f": 0.5,
+                "anchorY@f": 0.5
+              },
+              "fonts": {
+                "font:off-normal": {
+                  "resource_font": "project-Marathon/art/fonts/AvenirNextBold16",
+                  "alpha@f": 1.0
+                },
+                "font:off-hover": {
+                  "baseStyle": "menus.moreGamesMenuButton.text.fonts.font:off-normal",
+                  "alpha@f": 1.0
+                },
+                "font:off-down": {
+                  "baseStyle": "menus.moreGamesMenuButton.text.fonts.font:off-normal",
+                  "alpha@f": 1.0
+                },
+                "font:disabled": {
+                  "baseStyle": "menus.moreGamesMenuButton.text.fonts.font:off-normal",
+                  "alpha@f": 0.3
+                }
+              }
+            },
+            "inputFocus": {
+              "textures": {
+                "texture:inputFocus": {
+                  "baseStyle": "menus.menuButton.inputFocus.textures.texture:inputFocus"
+                }
+              }
+            }
+          },
+          "moreGamesButton": {
+            "baseStyle": "menus.menuButton",
+            "frame": {
+              "textures": {
+                "texture:off-normal": {
+                  "resource_texture": "project-Marathon/art/ui/buttons/button-plain-01-normal~inset-4~.png",
+                  "alpha@f": 1.0
+                },
+                "texture:off-hover": {
+                  "resource_texture": "project-Marathon/art/ui/buttons/button-plain-01-hover~inset-4~.png",
+                  "alpha@f": 1.0
+                },
+                "texture:off-down": {
+                  "resource_texture": "project-Marathon/art/ui/buttons/button-plain-01-normal~inset-4~.png",
+                  "alpha@f": 1.0
+                },
+                "texture:on-normal": {
+                  "baseStyle": "menus.moreGamesButton.frame.textures.texture:off-normal"
+                },
+                "texture:on-hover": {
+                  "baseStyle": "menus.moreGamesButton.frame.textures.texture:off-hover"
+                },
+                "texture:on-down": {
+                  "baseStyle": "menus.moreGamesButton.frame.textures.texture:off-down"
+                },
+                "texture:disabled": {
+                  "baseStyle": "menus.moreGamesButton.frame.textures.texture:off-normal",
+                  "alpha@f": 0.3
+                }
+              }
+            },
+            "width@f": 270.0,
+            "height@f": 120.0
+          }
+        },
+        "options": {
+          "optionsItemPanel": {
+            "title": {
+              "transform": {
+                "x@f": -10.0,
+                "y@f": 0.0,
+                "anchorX@f": 0.0,
+                "anchorY@f": 0.5,
+                "parentBoundsAlignX@f": 0.0,
+                "parentBoundsAlignY@f": 0.5
+              },
+              "font:title": {
+                "resource_font": "project-Marathon/art/fonts/AvenirMedium12"
+              }
+            },
+            "content": {
+              "transform": {
+                "x@f": 72.0,
+                "y@f": 0.0,
+                "anchorX@f": 0.5,
+                "anchorY@f": 0.5,
+                "parentBoundsAlignX@f": 0.5,
+                "parentBoundsAlignY@f": 0.5
+              }
+            }
+          },
+          "optionsItemButton": {
+            "width@f": 140.0,
+            "height@f": 20.0,
+            "frame": {
+              "textures": {
+                "texture:off-normal": {
+                  "baseStyle": "menus.menuButton.frame.textures.texture:off-normal",
+                  "resource_texture": "project-Marathon/art/ui/buttons/button-01-normal~inset-8~.png"
+                },
+                "texture:off-hover": {
+                  "baseStyle": "menus.menuButton.frame.textures.texture:off-hover",
+                  "resource_texture": "project-Marathon/art/ui/buttons/button-01-hover~inset-8~.png"
+                },
+                "texture:off-down": {
+                  "baseStyle": "menus.menuButton.frame.textures.texture:off-down",
+                  "resource_texture": "project-Marathon/art/ui/buttons/button-01-down~inset-8~.png"
+                },
+                "texture:on-normal": {
+                  "baseStyle": "options.optionsItemButton.frame.textures.texture:off-normal"
+                },
+                "texture:on-hover": {
+                  "baseStyle": "options.optionsItemButton.frame.textures.texture:off-hover"
+                },
+                "texture:on-down": {
+                  "baseStyle": "options.optionsItemButton.frame.textures.texture:off-down"
+                },
+                "texture:disabled": {
+                  "baseStyle": "options.optionsItemButton.frame.textures.texture:off-normal",
+                  "alpha@f": 0.3
+                }
+              }
+            },
+            "text": {
+              "transform": {
+                "x@f": 0.0,
+                "y@f": 0.0,
+                "anchorX@f": 0.5,
+                "anchorY@f": 0.5
+              },
+              "fonts": {
+                "font:off-normal": {
+                  "resource_font": "project-Marathon/art/fonts/AvenirMedium12",
+                  "alpha@f": 1.0
+                },
+                "font:off-hover": {
+                  "baseStyle": "options.optionsItemButton.text.fonts.font:off-normal"
+                },
+                "font:off-down": {
+                  "baseStyle": "options.optionsItemButton.text.fonts.font:off-normal"
+                },
+                "font:disabled": {
+                  "baseStyle": "options.optionsItemButton.text.fonts.font:off-normal",
+                  "alpha@f": 0.3
+                }
+              }
+            },
+            "inputFocus": {
+              "textures": {
+                "texture:inputFocus": {
+                  "resource_texture": "project-Marathon/art/ui/buttons/button-01-inputFocus~inset-8~.png",
+                  "alpha@f": 1.0,
+                  "widthMod@f": 8.0,
+                  "heightMod@f": 6.0
+                }
+              }
+            }
+          },
+          "optionsItemStepper": {
+            "width@f": 140.0,
+            "height@f": 20.0,
+            "button:buttons": {
+              "baseStyle": "options.optionsItemButton",
+              "width@f": 40.0
+            },
+            "font:value": {
+              "baseStyle": "options.optionsItemButton.text.fonts.font:off-normal"
+            },
+            "inputFocus": {
+              "textures": {
+                "texture:inputFocus": {
+                  "resource_texture": "project-Marathon/art/ui/buttons/button-01-inputFocus~inset-8~.png",
+                  "alpha@f": 1.0,
+                  "widthMod@f": 8.0,
+                  "heightMod@f": 6.0
+                }
+              }
+            }
+          },
+          "optionsItemStepper2": {
+            "width@f": 180.0,
+            "height@f": 20.0,
+            "button:buttons": {
+              "baseStyle": "options.optionsItemButton",
+              "width@f": 40.0
+            },
+            "font:value": {
+              "baseStyle": "options.optionsItemButton.text.fonts.font:off-normal"
+            }
+          }
+        },
+        "checkbox": {
+          "width@f": 20.0,
+          "height@f": 20.0,
+          "frame": {
+            "textures": {
+              "texture:off-normal": {
+                "baseStyle": "menus.menuButton.frame.textures.texture:off-normal",
+                "resource_texture": "project-Marathon/art/ui/buttons/checkbox-01-off-normal.png"
+              },
+              "texture:off-hover": {
+                "baseStyle": "menus.menuButton.frame.textures.texture:off-hover",
+                "resource_texture": "project-Marathon/art/ui/buttons/checkbox-01-off-hover.png"
+              },
+              "texture:off-down": {
+                "baseStyle": "menus.menuButton.frame.textures.texture:off-down",
+                "resource_texture": "project-Marathon/art/ui/buttons/checkbox-01-off-down.png"
+              },
+              "texture:on-normal": {
+                "baseStyle": "checkbox.frame.textures.texture:off-normal",
+                "resource_texture": "project-Marathon/art/ui/buttons/checkbox-01-on-normal.png"
+              },
+              "texture:on-hover": {
+                "baseStyle": "checkbox.frame.textures.texture:off-hover",
+                "resource_texture": "project-Marathon/art/ui/buttons/checkbox-01-on-hover.png"
+              },
+              "texture:on-down": {
+                "baseStyle": "checkbox.frame.textures.texture:off-down",
+                "resource_texture": "project-Marathon/art/ui/buttons/checkbox-01-on-down.png"
+              },
+              "texture:disabled": {
+                "baseStyle": "checkbox.frame.textures.texture:off-normal",
+                "alpha@f": 0.3
+              }
+            }
+          },
+          "text": {
+            "transform": {
+              "x@f": 17.0,
+              "y@f": 0.0,
+              "anchorX@f": 0.0,
+              "anchorY@f": 0.5
+            },
+            "fonts": {
+              "font:off-normal": {
+                "resource_font": "project-Marathon/art/fonts/AvenirMedium12",
+                "alpha@f": 1.0
+              },
+              "font:off-hover": {
+                "baseStyle": "checkbox.text.fonts.font:off-normal"
+              },
+              "font:off-down": {
+                "baseStyle": "checkbox.text.fonts.font:off-normal"
+              },
+              "font:on-normal": {
+                "baseStyle": "checkbox.text.fonts.font:off-normal"
+              },
+              "font:on-hover": {
+                "baseStyle": "checkbox.text.fonts.font:off-normal"
+              },
+              "font:on-down": {
+                "baseStyle": "checkbox.text.fonts.font:off-normal"
+              },
+              "font:disabled": {
+                "baseStyle": "checkbox.text.fonts.font:off-normal",
+                "alpha@f": 0.3
+              }
+            }
+          },
+          "inputFocus": {
+            "textures": {
+              "texture:inputFocus": {
+                "resource_texture": "project-Marathon/art/ui/buttons/button-01-inputFocus~inset-8~.png",
+                "alpha@f": 1.0,
+                "widthMod@f": 10.0,
+                "heightMod@f": 10.0
+              }
+            }
+          }
+        },
+        "textInput": {
+          "textInput1": {
+            "width@f": 400.0,
+            "height@f": 27.0,
+            "maxVisibleTextWidthOffset@f": 12.0,
+            "frame": {
+              "textures": { "texture:normal": { "resource_texture": "" } }
+            },
+            "text": {
+              "transform": {
+                "x@f": 6.0,
+                "y@f": 2.0,
+                "anchorX@f": 0.0,
+                "anchorY@f": 0.5,
+                "parentBoundsAlignX@f": 0.0,
+                "parentBoundsAlignY@f": 0.5
+              },
+              "fonts": { "font:normal": { "resource_font": "" } }
+            }
+          },
+          "textInputPanel1": {
+            "width@f": 520.0,
+            "height@f": 27.0,
+            "title": {
+              "transform": {
+                "x@f": 0.0,
+                "y@f": 2.0,
+                "anchorX@f": 0.0,
+                "anchorY@f": 0.5,
+                "parentBoundsAlignX@f": 0.0,
+                "parentBoundsAlignY@f": 0.5
+              },
+              "font:title": { "resource_font": "" }
+            },
+            "content": {
+              "transform": {
+                "x@f": 0.0,
+                "y@f": 0.0,
+                "anchorX@f": 1.0,
+                "anchorY@f": 0.5,
+                "parentBoundsAlignX@f": 1.0,
+                "parentBoundsAlignY@f": 0.5
+              },
+              "style": {
+                "layout": "horizontal",
+                "stride@f": 0.0,
+                "autoWidth": true,
+                "autoHeight": true,
+                "horizontalPadding@f": 0.0,
+                "verticalPadding@f": 0.0,
+                "alignment@f": 0.5
+              }
+            }
+          }
+        },
+        "dev": {
+          "devMenuButton1": {
+            "baseStyle": "options.optionsItemButton",
+            "width@f": 200.0
+          }
+        }
+      },
+      "objects": {
+        "highScoresView": {
+          "class": "_BPSTGHighScoresView",
+          "params": {
+            "highScoresViewType": "localHighScores",
+            "numVisibleEntries@i": 5,
+            "transform": { "width@f": -1.0, "height@f": -1.0 },
+            "style": {
+              "frame": {
+                "textures": {
+                  "texture:frame": {
+                    "resource_texture": "project-Marathon/art/ui/frames/frame-03~inset-8~.png"
+                  }
+                }
+              },
+              "content": {
+                "transform": {
+                  "x@f": 0.0,
+                  "y@f": 4.0,
+                  "anchorX@f": 0.5,
+                  "anchorY@f": 0.5,
+                  "parentBoundsAlignX@f": 0.5,
+                  "parentBoundsAlignY@f": 0.5
+                },
+                "style": {
+                  "layout": "vertical",
+                  "stride@f": -1.0,
+                  "autoWidth": true,
+                  "autoHeight": true,
+                  "horizontalPadding@f": 10.0,
+                  "verticalPadding@f": 6.0,
+                  "alignment@f": 0.5
+                }
+              }
+            },
+            "content": {
+              "_BPSBitmapTextView:highScoresLabel": {
+                "text": "HIGH SCORES",
+                "style": {
+                  "resource_font": "project-Marathon/art/fonts/AvenirNextBold18"
+                }
+              },
+              "_BPSContainerView:entriesContainer": {
+                "style": {
+                  "layout": "vertical",
+                  "stride@f": -1.0,
+                  "autoWidth": true,
+                  "autoHeight": true
+                },
+                "children": {
+                  "_BPSUIPanel:highScoreEntry": {
+                    "frameParams": {
+                      "normalState": {
+                        "resource_texture": "project-Marathon/art/ui/frames/box-white.png",
+                        "alphaEven@f": 0.13,
+                        "alphaOdd@f": 0.2
+                      },
+                      "highlightState": {
+                        "resource_texture": "project-Marathon/art/ui/frames/box-white.png",
+                        "alpha@f": 0.5
+                      }
+                    },
+                    "transform": { "width@f": -1.0, "height@f": -1.0 },
+                    "style": {
+                      "frame": {
+                        "textures": {
+                          "texture:frame": { "resource_texture": "" }
+                        }
+                      },
+                      "content": {
+                        "transform": {
+                          "x@f": 0.0,
+                          "y@f": 0.0,
+                          "anchorX@f": 0.5,
+                          "anchorY@f": 0.5,
+                          "parentBoundsAlignX@f": 0.5,
+                          "parentBoundsAlignY@f": 0.5
+                        },
+                        "style": {
+                          "layout": "horizontal",
+                          "stride@f": 200.0,
+                          "autoWidth": true,
+                          "autoHeight": true,
+                          "horizontalPadding@f": 7.0,
+                          "verticalPadding@f": 1.0,
+                          "alignment@f": 0.5
+                        }
+                      }
+                    },
+                    "content": {
+                      "_BPSBitmapTextView:name": {
+                        "text": "AAA",
+                        "transform": {
+                          "x@f": 0.0,
+                          "y@f": 0.0,
+                          "anchorX@f": 0.0,
+                          "anchorY@f": 0.5
+                        },
+                        "style": {
+                          "resource_font": "project-Marathon/art/fonts/AvenirNextBold16"
+                        }
+                      },
+                      "_BPSBitmapTextView:score": {
+                        "text": "0",
+                        "transform": {
+                          "x@f": 0.0,
+                          "y@f": 0.0,
+                          "anchorX@f": 1.0,
+                          "anchorY@f": 0.5
+                        },
+                        "style": {
+                          "resource_font": "project-Marathon/art/fonts/AvenirNextBold16"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "audio": {
+      "effects": {
+        "enabled": false,
+        "volume@f": 1.0,
+        "sounds": {
+          "buttonHover": {
+            "resource_sound": "",
+            "requirePreload": true,
+            "volume@f": 1.0
+          },
+          "buttonClick": {
+            "resource_sound": "",
+            "requirePreload": true,
+            "volume@f": 1.0
+          },
+          "windowOpen": {
+            "resource_sound": "",
+            "requirePreload": true,
+            "volume@f": 1.0
+          },
+          "windowClose": {
+            "resource_sound": "",
+            "requirePreload": true,
+            "volume@f": 1.0
+          }
+        }
+      }
+    },
+    "scenes": {
+      "loading": {
+        "deferConstruct": false,
+        "inputBlockingDelayMSEC@i": 100,
+        "hideOnSuspend": true,
+        "backgroundDimmingViewStyle": { "baseStyle": "" },
+        "UIInputMgr": { "enableUIControlsNavigation": false },
+        "viewHierarchy": {
+          "addControlListener": false,
+          "views": {
+            "_BPSScale9Sprite:backgroundImage": {
+              "enabled": true,
+              "transform": {
+                "width@f": 428.0,
+                "height@f": 640.0,
+                "x@f": 0.0,
+                "y@f": 0.0,
+                "anchorX@f": 0.5,
+                "anchorY@f": 0.5
+              },
+              "style": {
+                "resource_texture": "project-Marathon/art/ui/frames/box-black.png",
+                "alpha@f": 0.8
+              }
+            },
+            "_BPSSprite:logo": {
+              "enabled": true,
+              "transform": {
+                "x@f": 0.0,
+                "y@f": 0.0,
+                "anchorX@f": 0.5,
+                "anchorY@f": 0.5
+              },
+              "style": {
+                "resource_texture": "project-Marathon/art/logos/main-logo.png"
+              }
+            },
+            "_BPSScale9Sprite:legalTextBG": {
+              "enabled": false,
+              "transform": {
+                "width@f": 434.0,
+                "height@f": 150.0,
+                "x@f": 0.0,
+                "y@f": -190.0,
+                "anchorX@f": 0.5,
+                "anchorY@f": 1.0
+              },
+              "style": { "resource_texture": "", "alpha@f": 0.6 }
+            },
+            "_BPSBitmapTextView:legalText": {
+              "enabled": true,
+              "transform": {
+                "x@f": 0.0,
+                "y@f": -165.0,
+                "anchorX@f": 0.5,
+                "anchorY@f": 1.0
+              },
+              "text": "Tetris #{REGISTERED} #{AMP} #{COPYRIGHT} 1985~#{CURRENT_YEAR} Tetris Holding.\nTetris logos, Tetris theme song and Tetriminos are trademarks of Tetris Holding.\nThe Tetris trade dress is owned by Tetris Holding.\nLicensed to The Tetris Company.\nTetris Game Design by Alexey Pajitnov.\n#{BUILD_INFO_STRING}\nSound Effects provided by SomaTone Interactive Inc.",
+              "horizontalAlignment@i": 2,
+              "style": {
+                "resource_font": "project-Marathon/art/fonts/AvenirMedium12"
+              }
+            }
+          }
+        }
+      },
+      "mainMenu": {
+        "deferConstruct": false,
+        "inputBlockingDelayMSEC@i": 300,
+        "hideOnSuspend": true,
+        "backgroundDimmingViewStyle": { "baseStyle": "" },
+        "showHelpAtStart": false,
+        "allowAnyKeyToPlay": false,
+        "UIInputMgr": { "enableUIControlsNavigation": true },
+        "viewHierarchy": {
+          "addControlListener": true,
+          "views": {
+            "_BPSSprite:logo": {
+              "enabled": true,
+              "transform": {
+                "x@f": 0.0,
+                "y@f": 152.0,
+                "anchorX@f": 0.5,
+                "anchorY@f": 0.5
+              },
+              "resource_texture": "project-Marathon/art/logos/main-logo-small.png"
+            },
+            "_BPSUIPanel:menu": {
+              "transform": {
+                "width@f": -1.0,
+                "height@f": -1.0,
+                "x@f": 0.0,
+                "y@f": -78.0,
+                "anchorX@f": 0.5,
+                "anchorY@f": 0.5
+              },
+              "style": {
+                "frame": {
+                  "textures": { "texture:frame": { "resource_texture": "" } }
+                },
+                "content": {
+                  "transform": {
+                    "x@f": 0.0,
+                    "y@f": 8.0,
+                    "anchorX@f": 0.5,
+                    "anchorY@f": 0.5,
+                    "parentBoundsAlignX@f": 0.5,
+                    "parentBoundsAlignY@f": 0.5
+                  },
+                  "style": {
+                    "layout": "vertical",
+                    "stride@f": 0.0,
+                    "autoWidth": true,
+                    "autoHeight": true,
+                    "horizontalPadding@f": 0.0,
+                    "verticalPadding@f": 0.0,
+                    "alignment@f": 0.5
+                  }
+                }
+              },
+              "content": {
+                "_BPSUIButton:play": {
+                  "offText": "PLAY",
+                  "style": { "baseStyle": "menus.menuButton2" }
+                },
+                "_BPSView:space": { "transform": { "height@f": 0.0 } },
+                "_BPSUIButton:level": {
+                  "enabled": true,
+                  "offText": "LEVEL: ",
+                  "incrementValue@i": 5,
+                  "maxLevelIndex@i": 24,
+                  "style": { "baseStyle": "menus.menuButton" }
+                },
+                "_BPSContainerView:leaderboardButtonContainer": {
+                  "enabled": false,
+                  "style": { "layout": "vertical" },
+                  "children": {
+                    "_BPSView:space": { "transform": { "height@f": 2.0 } },
+                    "_BPSUIButton:leaderboard": {
+                      "offText": "LEADERBOARD",
+                      "style": { "baseStyle": "menus.menuButton" }
+                    }
+                  }
+                },
+                "_BPSContainerView:highScoresViewContainer": {
+                  "enabled": true,
+                  "style": { "layout": "vertical" },
+                  "children": {
+                    "_BPSView:space": {
+                      "enabled": true,
+                      "transform": { "height@f": 6.0 }
+                    },
+                    "highScoresView:highScoresView": { "enabled": true }
+                  }
+                }
+              }
+            },
+            "_BPSContainerView:iconButtons": {
+              "enabled": true,
+              "transform": {
+                "x@f": 0.0,
+                "y@f": -249.0,
+                "anchorX@f": 0.5,
+                "anchorY@f": 0.5
+              },
+              "style": {
+                "layout": "horizontal",
+                "stride@f": -3.0,
+                "autoWidth": true,
+                "autoHeight": true
+              },
+              "children": {
+                "_BPSUIButton:options": {
+                  "enabled": true,
+                  "style": {
+                    "baseStyle": "menus.menuButton3",
+                    "contentImage": {
+                      "textures": {
+                        "texture:off": {
+                          "resource_texture": "project-Marathon/art/icons/icon-options-30.png"
+                        }
+                      }
+                    }
+                  }
+                },
+                "_BPSUIButton:help": {
+                  "enabled": true,
+                  "style": {
+                    "baseStyle": "menus.menuButton3",
+                    "contentImage": {
+                      "textures": {
+                        "texture:off": {
+                          "resource_texture": "project-Marathon/art/icons/icon-help-30.png"
+                        }
+                      }
+                    }
+                  }
+                },
+                "_BPSUIButton:moreGames": {
+                  "enabled": true,
+                  "offText": "MORE\nGAMES",
+                  "style": { "baseStyle": "menus.moreGamesMenuButton" }
+                }
+              }
+            }
+          }
+        }
+      },
+      "game": {
+        "deferConstruct": false,
+        "inputBlockingDelayMSEC@i": 0,
+        "hideOnSuspend": false,
+        "backgroundDimmingViewStyle": { "baseStyle": "" },
+        "UIInputMgr": { "enableUIControlsNavigation": false },
+        "enableRestartKeys": false,
+        "restart1PlayerModeKey@i": 0,
+        "restart2PlayerModeKey@i": 0,
+        "restartAIModeKey@i": 0,
+        "interstitialAd": {
+          "enabled": true,
+          "showAdBeforeFirstGame": false,
+          "gamesPerAd@i": 1
+        },
+        "_BPSView:loadingView": {
+          "transform": { "x@f": 0.0, "y@f": 0.0 },
+          "children": {
+            "_BPSScale9Sprite:frame": {
+              "transform": {
+                "width@f": 267.0,
+                "height@f": 528.0,
+                "x@f": 0.0,
+                "y@f": 0.0,
+                "anchorX@f": 0.5,
+                "anchorY@f": 0.5
+              },
+              "style": { "resource_texture": "", "alpha@f": 0.5 }
+            },
+            "_BPSSprite:loadingImage": {
+              "resource_texture": "",
+              "transform": {
+                "x@f": 0.0,
+                "y@f": 0.0,
+                "anchorX@f": 0.5,
+                "anchorY@f": 0.5
+              }
+            },
+            "_BPSBitmapTextView:loadingText": {
+              "text": "LOADING...",
+              "transform": {
+                "x@f": 0.0,
+                "y@f": 0.0,
+                "anchorX@f": 0.5,
+                "anchorY@f": 0.5
+              },
+              "style": {
+                "resource_font": "project-Marathon/art/fonts/AvenirNextBold26"
+              }
+            }
+          }
+        }
+      },
+      "gameBreak": {
+        "deferConstruct": false,
+        "inputBlockingDelayMSEC@i": 100,
+        "hideOnSuspend": true,
+        "backgroundDimmingViewStyle": { "baseStyle": "backgroundDimmingView" },
+        "UIInputMgr": { "enableUIControlsNavigation": true },
+        "viewHierarchy": {
+          "addControlListener": true,
+          "views": {
+            "_BPSUIPanel:menu": {
+              "transform": {
+                "width@f": -1.0,
+                "height@f": -1.0,
+                "x@f": 0.0,
+                "y@f": 0.0,
+                "anchorX@f": 0.5,
+                "anchorY@f": 0.5
+              },
+              "style": {
+                "frame": {
+                  "textures": {
+                    "texture:frame": {
+                      "resource_texture": "project-Marathon/art/ui/frames/menu-frame-01~inset-36~.png"
+                    }
+                  }
+                },
+                "content": {
+                  "transform": {
+                    "x@f": 0.0,
+                    "y@f": 4.0,
+                    "anchorX@f": 0.5,
+                    "anchorY@f": 0.5,
+                    "parentBoundsAlignX@f": 0.5,
+                    "parentBoundsAlignY@f": 0.5
+                  },
+                  "style": {
+                    "layout": "vertical",
+                    "stride@f": -5.0,
+                    "autoWidth": true,
+                    "autoHeight": true,
+                    "horizontalPadding@f": 50.0,
+                    "verticalPadding@f": 50.0,
+                    "alignment@f": 0.5
+                  }
+                }
+              },
+              "content": {
+                "_BPSBitmapTextView:message": {
+                  "text": "LEVEL COMPLETE!",
+                  "style": {
+                    "resource_font": "project-Marathon/art/fonts/AvenirNextBold26"
+                  }
+                },
+                "_BPSView:space": { "transform": { "height@f": 10.0 } },
+                "_BPSUIButton:resume": {
+                  "offText": "CONTINUE",
+                  "style": { "baseStyle": "menus.menuButton4" }
+                }
+              }
+            },
+            "_BPSSprite:headerImage": {
+              "resource_texture": "",
+              "transform": {
+                "x@f": 0.0,
+                "y@f": 190.0,
+                "anchorX@f": 0.5,
+                "anchorY@f": 0.5
+              }
+            }
+          }
+        }
+      },
+      "gamePaused": {
+        "deferConstruct": true,
+        "inputBlockingDelayMSEC@i": 100,
+        "hideOnSuspend": true,
+        "backgroundDimmingViewStyle": { "baseStyle": "backgroundDimmingView" },
+        "UIInputMgr": { "enableUIControlsNavigation": true },
+        "confirmQuitMessage": "QUIT GAME?",
+        "viewHierarchy": {
+          "addControlListener": true,
+          "views": {
+            "_BPSUIPanel:menu": {
+              "transform": {
+                "width@f": -1.0,
+                "height@f": -1.0,
+                "x@f": 0.0,
+                "y@f": 0.0,
+                "anchorX@f": 0.5,
+                "anchorY@f": 0.5
+              },
+              "style": {
+                "frame": {
+                  "textures": {
+                    "texture:frame": {
+                      "resource_texture": "project-Marathon/art/ui/frames/menu-frame-01~inset-36~.png"
+                    }
+                  }
+                },
+                "content": {
+                  "transform": {
+                    "x@f": 0.0,
+                    "y@f": 4.0,
+                    "anchorX@f": 0.5,
+                    "anchorY@f": 0.5,
+                    "parentBoundsAlignX@f": 0.5,
+                    "parentBoundsAlignY@f": 0.5
+                  },
+                  "style": {
+                    "layout": "vertical",
+                    "stride@f": -5.0,
+                    "autoWidth": true,
+                    "autoHeight": true,
+                    "horizontalPadding@f": 50.0,
+                    "verticalPadding@f": 50.0,
+                    "alignment@f": 0.5
+                  }
+                }
+              },
+              "content": {
+                "_BPSBitmapTextView:title": {
+                  "text": "PAUSED",
+                  "style": {
+                    "resource_font": "project-Marathon/art/fonts/AvenirNextBold26"
+                  }
+                },
+                "_BPSView:space": { "transform": { "height@f": 10.0 } },
+                "_BPSUIButton:resume": {
+                  "offText": "RESUME",
+                  "style": { "baseStyle": "menus.menuButton4" }
+                },
+                "_BPSUIButton:options": {
+                  "enabled": true,
+                  "offText": "OPTIONS",
+                  "style": { "baseStyle": "menus.menuButton" }
+                },
+                "_BPSUIButton:help": {
+                  "enabled": true,
+                  "offText": "HOW TO PLAY",
+                  "style": { "baseStyle": "menus.menuButton" }
+                },
+                "_BPSUIButton:quit": {
+                  "enabled": true,
+                  "offText": "QUIT",
+                  "style": { "baseStyle": "menus.menuButton" }
+                }
+              }
+            },
+            "_BPSSprite:headerImage": {
+              "resource_texture": "",
+              "transform": {
+                "x@f": 0.0,
+                "y@f": 190.0,
+                "anchorX@f": 0.5,
+                "anchorY@f": 0.5
+              }
+            }
+          }
+        }
+      },
+      "gameOver": {
+        "deferConstruct": true,
+        "hideOnSuspend": true,
+        "inputBlockingDelayMSEC@i": 500,
+        "backgroundDimmingViewStyle": { "baseStyle": "backgroundDimmingView" },
+        "UIInputMgr": { "enableUIControlsNavigation": true },
+        "allowAnyKeyToPlay": false,
+        "autoPlayDelayMSEC@i": -1,
+        "viewHierarchy": {
+          "enabled": true,
+          "addControlListener": true,
+          "views": {
+            "_BPSUIPanel:menu": {
+              "transform": {
+                "width@f": -1.0,
+                "height@f": -1.0,
+                "x@f": 0.0,
+                "y@f": 0.0,
+                "anchorX@f": 0.5,
+                "anchorY@f": 0.5
+              },
+              "style": {
+                "frame": {
+                  "textures": {
+                    "texture:frame": {
+                      "resource_texture": "project-Marathon/art/ui/frames/menu-frame-01~inset-36~.png"
+                    }
+                  }
+                },
+                "content": {
+                  "transform": {
+                    "x@f": 0.0,
+                    "y@f": 4.0,
+                    "anchorX@f": 0.5,
+                    "anchorY@f": 0.5,
+                    "parentBoundsAlignX@f": 0.5,
+                    "parentBoundsAlignY@f": 0.5
+                  },
+                  "style": {
+                    "layout": "vertical",
+                    "stride@f": 0.0,
+                    "autoWidth": true,
+                    "autoHeight": true,
+                    "horizontalPadding@f": 45.0,
+                    "verticalPadding@f": 40.0,
+                    "alignment@f": 0.5
+                  }
+                }
+              },
+              "content": {
+                "_BPSBitmapTextView:title": {
+                  "text": "GAME OVER",
+                  "style": {
+                    "resource_font": "project-Marathon/art/fonts/AvenirNextBold26"
+                  }
+                },
+                "_BPSView:space": { "transform": { "height@f": 0.0 } },
+                "_BPSContainerView:resultViewContainer": {
+                  "enabled": false,
+                  "style": { "layout": "vertical" },
+                  "children": {
+                    "_BPSView:space": { "transform": { "height@f": 10.0 } },
+                    "_BPSBitmapTextView:currentScore": {
+                      "text": "SCORE: ",
+                      "style": {
+                        "resource_font": "project-Marathon/art/fonts/AvenirNextBold18"
+                      }
+                    },
+                    "_BPSView:space-1": { "transform": { "height@f": 0.0 } },
+                    "_BPSBitmapTextView:highScore": {
+                      "text": "YOUR BEST: ",
+                      "text-newHighScore": "NEW BEST SCORE!",
+                      "style": {
+                        "resource_font": "project-Marathon/art/fonts/AvenirNextBold18"
+                      }
+                    },
+                    "_BPSView:space-2": { "transform": { "height@f": 0.0 } }
+                  }
+                },
+                "_BPSContainerView:leaderboardButtonContainer": {
+                  "enabled": false,
+                  "style": { "layout": "vertical" },
+                  "children": {
+                    "_BPSView:space": { "transform": { "height@f": 10.0 } },
+                    "_BPSUIButton:leaderboard": {
+                      "offText": "LEADERBOARD",
+                      "style": { "baseStyle": "menus.menuButton" }
+                    },
+                    "_BPSView:space-1": { "transform": { "height@f": 0.0 } }
+                  }
+                },
+                "_BPSContainerView:highScoresViewContainer": {
+                  "enabled": true,
+                  "style": { "layout": "vertical" },
+                  "children": {
+                    "_BPSView:space": { "transform": { "height@f": 10.0 } },
+                    "highScoresView:highScoresView": { "enabled": true },
+                    "_BPSView:space-1": { "transform": { "height@f": 10.0 } }
+                  }
+                },
+                "_BPSView:space-1": { "transform": { "height@f": 0.0 } },
+                "_BPSContainerView:iconButtons": {
+                  "enabled": true,
+                  "style": {
+                    "layout": "horizontal",
+                    "stride@f": -3.0,
+                    "autoWidth": true,
+                    "autoHeight": true
+                  },
+                  "children": {
+                    "_BPSUIButton:mainMenu": {
+                      "style": {
+                        "baseStyle": "menus.menuButton3",
+                        "contentImage": {
+                          "textures": {
+                            "texture:off": {
+                              "resource_texture": "project-Marathon/art/icons/icon-home-30.png"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "_BPSUIButton:play": {
+                      "transform": { "width@f": 80.0, "height@f": 60.0 },
+                      "style": {
+                        "baseStyle": "menus.menuButton2",
+                        "contentImage": {
+                          "textures": {
+                            "texture:off": {
+                              "resource_texture": "project-Marathon/art/icons/icon-replay-30.png"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "_BPSUIButton:moreGames": {
+                      "enabled": true,
+                      "offText": "MORE\nGAMES",
+                      "style": { "baseStyle": "menus.moreGamesMenuButton" }
+                    }
+                  }
+                },
+                "_BPSView:space-2": {
+                  "enabled": true,
+                  "transform": { "height@f": 0.0 }
+                }
+              }
+            }
+          }
+        }
+      },
+      "options": {
+        "deferConstruct": true,
+        "inputBlockingDelayMSEC@i": 100,
+        "hideOnSuspend": true,
+        "backgroundDimmingViewStyle": { "baseStyle": "backgroundDimmingView" },
+        "UIInputMgr": { "enableUIControlsNavigation": true },
+        "enableOptionsSaving": true,
+        "confirmResetOptionsMessage": "RESET OPTIONS?",
+        "confirmResetRecordsMessage": "RESET HIGH SCORES?",
+        "viewHierarchy": {
+          "addControlListener": true,
+          "views": {
+            "_BPSUIPanel:menu": {
+              "transform": {
+                "width@f": -1.0,
+                "height@f": -1.0,
+                "x@f": 0.0,
+                "y@f": 0.0,
+                "anchorX@f": 0.5,
+                "anchorY@f": 0.5
+              },
+              "style": {
+                "frame": {
+                  "textures": {
+                    "texture:frame": {
+                      "resource_texture": "project-Marathon/art/ui/frames/menu-frame-01~inset-36~.png"
+                    }
+                  }
+                },
+                "content": {
+                  "transform": {
+                    "x@f": 0.0,
+                    "y@f": 3.0,
+                    "anchorX@f": 0.5,
+                    "anchorY@f": 0.5,
+                    "parentBoundsAlignX@f": 0.5,
+                    "parentBoundsAlignY@f": 0.5
+                  },
+                  "style": {
+                    "layout": "vertical",
+                    "stride@f": -4.0,
+                    "autoWidth": true,
+                    "autoHeight": true,
+                    "horizontalPadding@f": 60.0,
+                    "verticalPadding@f": 25.0,
+                    "alignment@f": 0.5
+                  }
+                }
+              },
+              "content": {
+                "_BPSBitmapTextView:title": {
+                  "text": "OPTIONS",
+                  "style": {
+                    "resource_font": "project-Marathon/art/fonts/AvenirNextBold26"
+                  }
+                },
+                "_BPSView:space-section-player": {
+                  "enabled": false,
+                  "transform": { "height@f": 10.0 }
+                },
+                "_BPSUIStepper:playerIndex": {
+                  "enabled": false,
+                  "minValue@i": 1,
+                  "maxValue@i": 2,
+                  "stepValue@i": 1,
+                  "valueLabels": "",
+                  "valuePrefix": "PLAYER ",
+                  "valueSuffix": "",
+                  "style": { "baseStyle": "options.optionsItemStepper2" }
+                },
+                "_BPSView:space~platforms-osx,ios,unitymobile,html5mobile": {
+                  "enabled": true,
+                  "transform": { "height@f": 3.0 }
+                },
+                "_BPSUIPanel:item__pointerInputType~platforms-osx,ios,unitymobile,html5mobile": {
+                  "enabled": true,
+                  "title": "CONTROL TYPE",
+                  "transform": { "width@f": 267.0, "height@f": 20.0 },
+                  "style": { "baseStyle": "options.optionsItemPanel" },
+                  "content": {
+                    "_BPSUIStepper:pointerInputType": {
+                      "minValue@i": 1,
+                      "maxValue@i": 2,
+                      "stepValue@i": 1,
+                      "valueLabels": "SMART,SWIPE",
+                      "valuePrefix": "",
+                      "valueSuffix": "",
+                      "style": { "baseStyle": "options.optionsItemStepper" }
+                    }
+                  },
+                  "pathToOptionsValue": "player[PLAYER_INDEX].pointerInputType",
+                  "pathToTargetValue": "gameMgr.game.players.player-base.playerComponents.control.params.pointerInputType",
+                  "defaultValue@i": 1,
+                  "defaultValue-platforms": {
+                    "html5mobile@i": 2,
+                    "unitymobile@i": 2
+                  }
+                },
+                "_BPSUIPanel:item__enableSwipeCCWRotation~platforms-osx,ios,unitymobile,html5mobile": {
+                  "enabled": true,
+                  "title": "ENABLE SWIPE CCW ROTATION",
+                  "transform": { "width@f": 267.0, "height@f": 20.0 },
+                  "style": { "baseStyle": "options.optionsItemPanel" },
+                  "content": {
+                    "_BPSUIButton:enableSwipeCCWRotation": {
+                      "style": { "baseStyle": "checkbox" }
+                    }
+                  },
+                  "pathToOptionsValue": "player[PLAYER_INDEX].enableSwipeCCWRotation",
+                  "pathToTargetValue": "gameMgr.game.players.player-base.playerComponents.control.params.gestureInput.enableCCWRotation",
+                  "defaultValue": false
+                },
+                "_BPSView:space-1": {
+                  "enabled": true,
+                  "transform": { "height@f": 1.0 }
+                },
+                "_BPSUIPanel:item__enableMouseControl~platforms-osx,unitydesktop,unitymobile,html5desktop": {
+                  "enabled": true,
+                  "title": "ENABLE MOUSE CONTROL",
+                  "transform": { "width@f": 267.0, "height@f": 16.0 },
+                  "style": { "baseStyle": "options.optionsItemPanel" },
+                  "content": {
+                    "_BPSUIButton:enableMouseControl": {
+                      "style": { "baseStyle": "checkbox" }
+                    }
+                  },
+                  "pathToOptionsValue": "player[PLAYER_INDEX].enableMouseControl",
+                  "pathToTargetValue": "gameMgr.game.players.player-base.playerComponents.control.params.enableAutomaticInputTypeSwitching",
+                  "defaultValue": true
+                },
+                "_BPSView:space-2~platforms-osx,unitydesktop,html5desktop": {
+                  "enabled": true,
+                  "transform": { "height@f": 5.0 }
+                },
+                "_BPSUIPanel:item__controls_moveRight~platforms-osx,unitydesktop,html5desktop,unitymobile": {
+                  "enabled": true,
+                  "title": "MOVE RIGHT",
+                  "transform": { "width@f": 267.0, "height@f": 20.0 },
+                  "style": { "baseStyle": "options.optionsItemPanel" },
+                  "content": {
+                    "_BPSUIButton:controls_moveRight": {
+                      "style": { "baseStyle": "options.optionsItemButton" }
+                    }
+                  },
+                  "pathToOptionsValue": "player[PLAYER_INDEX].controls_moveRight",
+                  "pathToTargetValue": "gameMgr.game.players.player-base.playerComponents.control.params.directInput.controls.directMoveRight",
+                  "defaultValue": "Keyboard.RightArrow",
+                  "defaultValue-platforms": {
+                    "unitymobile": "Gamepad.DPadRight"
+                  }
+                },
+                "_BPSUIPanel:item__controls_moveLeft~platforms-osx,unitydesktop,html5desktop,unitymobile": {
+                  "enabled": true,
+                  "title": "MOVE LEFT",
+                  "transform": { "width@f": 267.0, "height@f": 20.0 },
+                  "style": { "baseStyle": "options.optionsItemPanel" },
+                  "content": {
+                    "_BPSUIButton:controls_moveLeft": {
+                      "style": { "baseStyle": "options.optionsItemButton" }
+                    }
+                  },
+                  "pathToOptionsValue": "player[PLAYER_INDEX].controls_moveLeft",
+                  "pathToTargetValue": "gameMgr.game.players.player-base.playerComponents.control.params.directInput.controls.directMoveLeft",
+                  "defaultValue": "Keyboard.LeftArrow",
+                  "defaultValue-platforms": {
+                    "unitymobile": "Gamepad.DPadLeft"
+                  }
+                },
+                "_BPSUIPanel:item__controls_rotateCW~platforms-osx,unitydesktop,html5desktop,unitymobile": {
+                  "enabled": true,
+                  "title": "ROTATE RIGHT",
+                  "transform": { "width@f": 267.0, "height@f": 20.0 },
+                  "style": { "baseStyle": "options.optionsItemPanel" },
+                  "content": {
+                    "_BPSUIButton:controls_rotateCW": {
+                      "style": { "baseStyle": "options.optionsItemButton" }
+                    }
+                  },
+                  "pathToOptionsValue": "player[PLAYER_INDEX].controls_rotateCW",
+                  "pathToTargetValue": "gameMgr.game.players.player-base.playerComponents.control.params.directInput.controls.directRotateCW",
+                  "defaultValue": "Keyboard.UpArrow",
+                  "defaultValue-platforms": {
+                    "unitymobile": "Gamepad.EastButton"
+                  }
+                },
+                "_BPSUIPanel:item__controls_rotateCCW~platforms-osx,unitydesktop,html5desktop,unitymobile": {
+                  "enabled": true,
+                  "title": "ROTATE LEFT",
+                  "transform": { "width@f": 267.0, "height@f": 20.0 },
+                  "style": { "baseStyle": "options.optionsItemPanel" },
+                  "content": {
+                    "_BPSUIButton:controls_rotateCCW": {
+                      "style": { "baseStyle": "options.optionsItemButton" }
+                    }
+                  },
+                  "pathToOptionsValue": "player[PLAYER_INDEX].controls_rotateCCW",
+                  "pathToTargetValue": "gameMgr.game.players.player-base.playerComponents.control.params.directInput.controls.directRotateCCW",
+                  "defaultValue": "Keyboard.Z",
+                  "defaultValue-platforms": {
+                    "unitymobile": "Gamepad.SouthButton"
+                  }
+                },
+                "_BPSUIPanel:item__controls_softDrop~platforms-osx,unitydesktop,html5desktop,unitymobile": {
+                  "enabled": true,
+                  "title": "SOFT DROP",
+                  "transform": { "width@f": 267.0, "height@f": 20.0 },
+                  "style": { "baseStyle": "options.optionsItemPanel" },
+                  "content": {
+                    "_BPSUIButton:controls_softDrop": {
+                      "style": { "baseStyle": "options.optionsItemButton" }
+                    }
+                  },
+                  "pathToOptionsValue": "player[PLAYER_INDEX].controls_softDrop",
+                  "pathToTargetValue": "gameMgr.game.players.player-base.playerComponents.control.params.directInput.controls.directSoftDrop",
+                  "defaultValue": "Keyboard.DownArrow",
+                  "defaultValue-platforms": {
+                    "unitymobile": "Gamepad.DPadDown"
+                  }
+                },
+                "_BPSUIPanel:item__controls_hardDrop~platforms-osx,unitydesktop,html5desktop,unitymobile": {
+                  "enabled": true,
+                  "title": "HARD DROP",
+                  "transform": { "width@f": 267.0, "height@f": 20.0 },
+                  "style": { "baseStyle": "options.optionsItemPanel" },
+                  "content": {
+                    "_BPSUIButton:controls_hardDrop": {
+                      "style": { "baseStyle": "options.optionsItemButton" }
+                    }
+                  },
+                  "pathToOptionsValue": "player[PLAYER_INDEX].controls_hardDrop",
+                  "pathToTargetValue": "gameMgr.game.players.player-base.playerComponents.control.params.directInput.controls.directHardDrop",
+                  "defaultValue": "Keyboard.Space",
+                  "defaultValue-platforms": { "unitymobile": "Gamepad.DPadUp" }
+                },
+                "_BPSUIPanel:item__controls_hold~platforms-osx,unitydesktop,html5desktop,unitymobile": {
+                  "enabled": true,
+                  "title": "HOLD",
+                  "transform": { "width@f": 267.0, "height@f": 20.0 },
+                  "style": { "baseStyle": "options.optionsItemPanel" },
+                  "content": {
+                    "_BPSUIButton:controls_hold": {
+                      "style": { "baseStyle": "options.optionsItemButton" }
+                    }
+                  },
+                  "pathToOptionsValue": "player[PLAYER_INDEX].controls_hold",
+                  "pathToTargetValue": "gameMgr.game.players.player-base.playerComponents.control.params.directInput.controls.directHold",
+                  "defaultValue": "Keyboard.C",
+                  "defaultValue-platforms": {
+                    "unitymobile": "Gamepad.RightShoulder"
+                  }
+                },
+                "_BPSView:space-3": {
+                  "enabled": true,
+                  "transform": { "height@f": 5.0 }
+                },
+                "_BPSUIPanel:item__moveAutoRepeatInitialDelayMSEC~platforms-osx,unitydesktop,unitymobile,html5desktop": {
+                  "enabled": true,
+                  "title": "AUTO-REPEAT DELAY",
+                  "transform": { "width@f": 267.0, "height@f": 20.0 },
+                  "style": { "baseStyle": "options.optionsItemPanel" },
+                  "content": {
+                    "_BPSUIStepper:moveAutoRepeatInitialDelayMSEC": {
+                      "minValue@i": 20,
+                      "maxValue@i": 500,
+                      "stepValue@i": 10,
+                      "valuePrefix": "",
+                      "valueSuffix": " ms",
+                      "style": { "baseStyle": "options.optionsItemStepper" }
+                    }
+                  },
+                  "pathToOptionsValue": "player[PLAYER_INDEX].moveAutoRepeatInitialDelayMSEC",
+                  "pathToTargetValue": "gameMgr.game.players.player-base.playerComponents.control.params.directInput.moveAutoRepeatInitialDelayMSEC",
+                  "defaultValue@i": 170
+                },
+                "_BPSUIPanel:item__moveAutoRepeatDelayMSEC~platforms-osx,unitydesktop,unitymobile,html5desktop": {
+                  "enabled": true,
+                  "title": "AUTO-REPEAT SPEED",
+                  "transform": { "width@f": 267.0, "height@f": 20.0 },
+                  "style": { "baseStyle": "options.optionsItemPanel" },
+                  "content": {
+                    "_BPSUIStepper:moveAutoRepeatDelayMSEC": {
+                      "minValue@i": 20,
+                      "maxValue@i": 500,
+                      "stepValue@i": 10,
+                      "valuePrefix": "",
+                      "valueSuffix": " ms",
+                      "style": { "baseStyle": "options.optionsItemStepper" }
+                    }
+                  },
+                  "pathToOptionsValue": "player[PLAYER_INDEX].moveAutoRepeatDelayMSEC",
+                  "pathToTargetValue": "gameMgr.game.players.player-base.playerComponents.control.params.directInput.moveAutoRepeatDelayMSEC",
+                  "defaultValue@i": 50
+                },
+                "_BPSView:space-section-global~platforms-osx,unitydesktop,html5desktop": {
+                  "enabled": true,
+                  "transform": { "height@f": 5.0 }
+                },
+                "_BPSUIPanel:item__enableAnimations": {
+                  "enabled": true,
+                  "title": "SHOW ANIMATIONS",
+                  "transform": { "width@f": 267.0, "height@f": 20.0 },
+                  "style": { "baseStyle": "options.optionsItemPanel" },
+                  "content": {
+                    "_BPSUIButton:enableAnimations": {
+                      "style": { "baseStyle": "checkbox" }
+                    }
+                  },
+                  "pathToOptionsValue": "enableAnimations",
+                  "pathToTargetValue": "gameMgr.gameView.playerViews.playerView-base.enableAnimations",
+                  "defaultValue": true
+                },
+                "_BPSUIPanel:item__enableGhostPiece~platforms-osx,unitydesktop,html5desktop,unitymobile,html5mobile": {
+                  "enabled": true,
+                  "title": "SHOW GHOST PIECE",
+                  "transform": { "width@f": 267.0, "height@f": 20.0 },
+                  "style": { "baseStyle": "options.optionsItemPanel" },
+                  "content": {
+                    "_BPSUIButton:enableGhostPiece": {
+                      "style": { "baseStyle": "checkbox" }
+                    }
+                  },
+                  "pathToOptionsValue": "enableGhostPiece",
+                  "pathToTargetValue": "gameMgr.gameView.playerViews.playerView-base.ghostPiece.enabled",
+                  "defaultValue": true
+                },
+                "_BPSView:space-4": {
+                  "enabled": true,
+                  "transform": { "height@f": 5.0 }
+                },
+                "_BPSUIPanel:item__actionPreDelayMSEC": {
+                  "enabled": false,
+                  "title": "AI INPUT DELAY MSEC",
+                  "transform": { "width@f": 267.0, "height@f": 20.0 },
+                  "style": { "baseStyle": "options.optionsItemPanel" },
+                  "content": {
+                    "_BPSUIStepper:actionPreDelayMSEC": {
+                      "minValue@i": 20,
+                      "maxValue@i": 1000,
+                      "stepValue@i": 10,
+                      "valuePrefix": "",
+                      "valueSuffix": " ms",
+                      "style": { "baseStyle": "options.optionsItemStepper" }
+                    }
+                  },
+                  "pathToOptionsValue": "actionPreDelayMSEC",
+                  "pathToTargetValue": "gameMgr.game.players.player-base.playerComponents.control.params.AIInput.actionPreDelayMSEC",
+                  "defaultValue@i": 100
+                },
+                "_BPSView:space-5": {
+                  "enabled": false,
+                  "transform": { "height@f": 5.0 }
+                },
+                "_BPSUIPanel:item__timeLimitSEC": {
+                  "enabled": false,
+                  "title": "TIME LIMIT",
+                  "transform": { "width@f": 267.0, "height@f": 20.0 },
+                  "style": { "baseStyle": "options.optionsItemPanel" },
+                  "content": {
+                    "_BPSUIStepper:timeLimitSEC": {
+                      "minValue@i": 0,
+                      "maxValue@i": 1200,
+                      "stepValue@i": 30,
+                      "valuePrefix": "",
+                      "valueSuffix": " s",
+                      "style": { "baseStyle": "options.optionsItemStepper" }
+                    }
+                  },
+                  "pathToOptionsValue": "timeLimitSEC",
+                  "pathToTargetValue": "gameMgr.game.players.player-base.params.timeLimitSEC",
+                  "defaultValue@i": 0
+                },
+                "_BPSView:space-6": {
+                  "enabled": false,
+                  "transform": { "height@f": 5.0 }
+                },
+                "_BPSUIPanel:item__waitTimeWithZeroReadyPlayersSEC": {
+                  "enabled": false,
+                  "title": "0-P AUTO START DELAY",
+                  "transform": { "width@f": 267.0, "height@f": 20.0 },
+                  "style": { "baseStyle": "options.optionsItemPanel" },
+                  "content": {
+                    "_BPSUIStepper:waitTimeWithZeroReadyPlayersSEC": {
+                      "minValue@i": 0,
+                      "maxValue@i": 600,
+                      "stepValue@i": 10,
+                      "valuePrefix": "",
+                      "valueSuffix": " s",
+                      "style": { "baseStyle": "options.optionsItemStepper" }
+                    }
+                  },
+                  "pathToOptionsValue": "waitTimeWithZeroReadyPlayersSEC",
+                  "pathToTargetValue": "gameMgr.game.gameParams.waitTimeWithZeroReadyPlayersSEC",
+                  "defaultValue@i": 0
+                },
+                "_BPSUIPanel:item__waitTimeWithAnyReadyPlayersSEC": {
+                  "enabled": false,
+                  "title": "1-P AUTO START DELAY",
+                  "transform": { "width@f": 267.0, "height@f": 20.0 },
+                  "style": { "baseStyle": "options.optionsItemPanel" },
+                  "content": {
+                    "_BPSUIStepper:waitTimeWithAnyReadyPlayersSEC": {
+                      "minValue@i": 0,
+                      "maxValue@i": 600,
+                      "stepValue@i": 10,
+                      "valuePrefix": "",
+                      "valueSuffix": " s",
+                      "style": { "baseStyle": "options.optionsItemStepper" }
+                    }
+                  },
+                  "pathToOptionsValue": "waitTimeWithAnyReadyPlayersSEC",
+                  "pathToTargetValue": "gameMgr.game.gameParams.waitTimeWithAnyReadyPlayersSEC",
+                  "defaultValue@i": 0
+                },
+                "_BPSView:space-section-audio": {
+                  "enabled": false,
+                  "transform": { "height@f": 5.0 }
+                },
+                "_BPSUIPanel:item__effects_volume": {
+                  "title": "SOUND FX VOLUME",
+                  "transform": { "width@f": 267.0, "height@f": 20.0 },
+                  "style": { "baseStyle": "options.optionsItemPanel" },
+                  "content": {
+                    "_BPSUIStepper:effects_volume": {
+                      "minValue@i": 0,
+                      "maxValue@i": 100,
+                      "stepValue@i": 10,
+                      "valuePrefix": "",
+                      "valueSuffix": "%",
+                      "style": { "baseStyle": "options.optionsItemStepper" }
+                    }
+                  },
+                  "pathToOptionsValue": "effects_volume",
+                  "pathToTargetValue": "gameMgr.gameAudio.effects.volume",
+                  "defaultValue@i": 100,
+                  "defaultValue-platforms": { "html5mobile@i": 100 },
+                  "saveFloat1ItemAsPercent100": true
+                },
+                "_BPSUIPanel:item__music_volume": {
+                  "title": "MUSIC VOLUME",
+                  "transform": { "width@f": 267.0, "height@f": 20.0 },
+                  "style": { "baseStyle": "options.optionsItemPanel" },
+                  "content": {
+                    "_BPSUIStepper:music_volume": {
+                      "minValue@i": 0,
+                      "maxValue@i": 100,
+                      "stepValue@i": 10,
+                      "valuePrefix": "",
+                      "valueSuffix": "%",
+                      "style": { "baseStyle": "options.optionsItemStepper" }
+                    }
+                  },
+                  "pathToOptionsValue": "music_volume",
+                  "pathToTargetValue": "gameMgr.gameAudio.music.volume",
+                  "defaultValue@i": 100,
+                  "defaultValue-platforms": { "html5mobile@i": 30 },
+                  "saveFloat1ItemAsPercent100": true
+                },
+                "_BPSUIPanel:item__music_selectedFileIndex": {
+                  "enabled": true,
+                  "title": "MUSIC TYPE",
+                  "transform": { "width@f": 267.0, "height@f": 20.0 },
+                  "style": { "baseStyle": "options.optionsItemPanel" },
+                  "content": {
+                    "_BPSUIStepper:music_selectedFileIndex": {
+                      "minValue@i": 1,
+                      "maxValue@i": 3,
+                      "stepValue@i": 1,
+                      "allowWrapping": false,
+                      "valuePrefix": "TYPE ",
+                      "valueSuffix": "",
+                      "style": { "baseStyle": "options.optionsItemStepper" }
+                    }
+                  },
+                  "pathToOptionsValue": "music_selectedFileIndex",
+                  "pathToTargetValue": "gameMgr.gameAudio.music.selectedFileIndex",
+                  "defaultValue@i": 1
+                },
+                "_BPSView:space-section-buttons": {
+                  "transform": { "height@f": 5.0 }
+                },
+                "_BPSContainerView:resetButtons": {
+                  "style": {
+                    "layout": "horizontal",
+                    "stride@f": -15.0,
+                    "autoWidth": true,
+                    "autoHeight": true
+                  },
+                  "children": {
+                    "_BPSUIButton:resetHighScores": {
+                      "enabled": true,
+                      "offText": "RESET HIGH SCORES",
+                      "transform": { "width@f": 130.0, "height@f": 30.0 },
+                      "style": { "baseStyle": "options.optionsItemButton" }
+                    },
+                    "_BPSUIButton:resetOptions": {
+                      "offText": "RESET OPTIONS",
+                      "transform": { "width@f": 130.0, "height@f": 30.0 },
+                      "style": { "baseStyle": "options.optionsItemButton" }
+                    }
+                  }
+                },
+                "_BPSView:space-7": { "transform": { "height@f": 0.0 } },
+                "_BPSUIButton:done": {
+                  "offText": "DONE",
+                  "style": {
+                    "baseStyle": "menus.menuButton",
+                    "width@f": 120.0,
+                    "height@f": 52.0
+                  }
+                },
+                "_BPSBitmapTextView:buildInfoString": {
+                  "text": "#{BUILD_INFO_STRING}",
+                  "style": {
+                    "resource_font": "project-Marathon/art/fonts/AvenirMedium12",
+                    "alpha@f": 0.5
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "captureControlId": {
+        "deferConstruct": false,
+        "inputBlockingDelayMSEC@i": 100,
+        "hideOnSuspend": true,
+        "backgroundDimmingViewStyle": { "baseStyle": "backgroundDimmingView" },
+        "UIInputMgr": { "enableUIControlsNavigation": false },
+        "viewHierarchy": {
+          "addControlListener": true,
+          "views": {
+            "_BPSUIPanel:menu": {
+              "transform": {
+                "width@f": -1.0,
+                "height@f": -1.0,
+                "x@f": 0.0,
+                "y@f": 0.0,
+                "anchorX@f": 0.5,
+                "anchorY@f": 0.5
+              },
+              "style": {
+                "frame": {
+                  "textures": {
+                    "texture:frame": {
+                      "resource_texture": "project-Marathon/art/ui/frames/menu-frame-01~inset-36~.png"
+                    }
+                  }
+                },
+                "content": {
+                  "transform": {
+                    "x@f": 0.0,
+                    "y@f": 0.0,
+                    "anchorX@f": 0.5,
+                    "anchorY@f": 0.5,
+                    "parentBoundsAlignX@f": 0.5,
+                    "parentBoundsAlignY@f": 0.5
+                  },
+                  "style": {
+                    "layout": "vertical",
+                    "stride@f": -5.0,
+                    "autoWidth": true,
+                    "autoHeight": true,
+                    "horizontalPadding@f": 60.0,
+                    "verticalPadding@f": 50.0,
+                    "alignment@f": 0.5
+                  }
+                }
+              },
+              "content": {
+                "_BPSBitmapTextView:message": {
+                  "text": "PRESS THE DESIRED KEY FOR",
+                  "style": {
+                    "resource_font": "project-Marathon/art/fonts/AvenirNextBold18"
+                  }
+                },
+                "_BPSView:space": { "transform": { "height@f": 20.0 } },
+                "_BPSBitmapTextView:inputName": {
+                  "text": "INPUT NAME",
+                  "style": {
+                    "resource_font": "project-Marathon/art/fonts/AvenirNextBold26"
+                  }
+                },
+                "_BPSView:space-1": { "transform": { "height@f": 0.0 } },
+                "_BPSUIButton:cancel": {
+                  "offText": "CANCEL",
+                  "transform": { "width@f": 120.0, "height@f": 60.0 },
+                  "style": { "baseStyle": "menus.menuButton" }
+                }
+              }
+            }
+          }
+        }
+      },
+      "help": {
+        "deferConstruct": true,
+        "inputBlockingDelayMSEC@i": 100,
+        "hideOnSuspend": true,
+        "backgroundDimmingViewStyle": { "baseStyle": "backgroundDimmingView" },
+        "UIInputMgr": { "enableUIControlsNavigation": true },
+        "enableDontShowAtStartButton": true,
+        "viewHierarchy": {
+          "addControlListener": true,
+          "views": {
+            "_BPSUIPanel:menu": {
+              "transform": {
+                "width@f": 420.0,
+                "height@f": 620.0,
+                "x@f": 0.0,
+                "y@f": 0.0,
+                "anchorX@f": 0.5,
+                "anchorY@f": 0.5
+              },
+              "style": {
+                "frame": {
+                  "textures": {
+                    "texture:frame": {
+                      "resource_texture": "project-Marathon/art/ui/frames/menu-frame-01~inset-36~.png"
+                    }
+                  }
+                },
+                "content": {
+                  "transform": {
+                    "x@f": 0.0,
+                    "y@f": 0.0,
+                    "anchorX@f": 0.5,
+                    "anchorY@f": 0.5,
+                    "parentBoundsAlignX@f": 0.5,
+                    "parentBoundsAlignY@f": 0.5
+                  },
+                  "style": {
+                    "layout": "vertical",
+                    "stride@f": -5.0,
+                    "autoWidth": true,
+                    "autoHeight": true,
+                    "horizontalPadding@f": 60.0,
+                    "verticalPadding@f": 50.0,
+                    "alignment@f": 0.5
+                  }
+                }
+              },
+              "content": {},
+              "children": {
+                "_BPSView:pages": {
+                  "transform": { "x@f": 0.0, "y@f": 30.0 },
+                  "children": {
+                    "_BPSSprite:help1": {
+                      "resource_texture": "project-Marathon/art/help/mobile/Help-1.png"
+                    },
+                    "_BPSSprite:help2": {
+                      "resource_texture": "project-Marathon/art/help/mobile/Help-2.png"
+                    },
+                    "_BPSSprite:help3": {
+                      "resource_texture": "project-Marathon/art/help/mobile/Help-3.png"
+                    }
+                  }
+                },
+                "_BPSContainerView:buttons": {
+                  "transform": {
+                    "x@f": 0.0,
+                    "y@f": -250.0,
+                    "anchorX@f": 0.5,
+                    "anchorY@f": 0.5
+                  },
+                  "style": { "layout": "horizontal", "stride@f": -15.0 },
+                  "children": {
+                    "_BPSUIButton:prev": {
+                      "transform": {
+                        "width@f": 60.0,
+                        "height@f": 52.0,
+                        "anchorX@f": 0.5,
+                        "anchorY@f": 0.5
+                      },
+                      "offText": "<",
+                      "style": {
+                        "baseStyle": "menus.menuButton",
+                        "contentImage": {
+                          "textures": {
+                            "texture:off": { "resource_texture": "" },
+                            "texture:disabled": { "resource_texture": "" }
+                          }
+                        }
+                      }
+                    },
+                    "_BPSUIButton:done": {
+                      "transform": {
+                        "width@f": 100.0,
+                        "height@f": 52.0,
+                        "anchorX@f": 0.5,
+                        "anchorY@f": 0.5
+                      },
+                      "offText": "DONE",
+                      "style": { "baseStyle": "menus.menuButton" }
+                    },
+                    "_BPSUIButton:next": {
+                      "transform": {
+                        "width@f": 60.0,
+                        "height@f": 52.0,
+                        "anchorX@f": 0.5,
+                        "anchorY@f": 0.5
+                      },
+                      "offText": ">",
+                      "style": {
+                        "baseStyle": "menus.menuButton",
+                        "contentImage": {
+                          "textures": {
+                            "texture:off": { "resource_texture": "" },
+                            "texture:disabled": { "resource_texture": "" }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "_BPSContainerView:dontShowHelpAtStart": {
+                  "transform": {
+                    "x@f": 265.0,
+                    "y@f": -250.0,
+                    "anchorX@f": 0.5,
+                    "anchorY@f": 0.5
+                  },
+                  "style": { "layout": "horizontal", "stride@f": -15.0 },
+                  "children": {
+                    "_BPSBitmapTextView:text_dontShowHelpAtStart": {
+                      "text": "DON'T SHOW AGAIN?",
+                      "style": {
+                        "resource_font": "project-Marathon/art/fonts/AvenirMedium12"
+                      }
+                    },
+                    "_BPSUIButton:button_dontShowHelpAtStart": {
+                      "transform": { "width@f": 20.0, "height@f": 20.0 },
+                      "style": { "baseStyle": "checkbox" }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "moreGames": {
+        "deferConstruct": true,
+        "inputBlockingDelayMSEC@i": 100,
+        "hideOnSuspend": true,
+        "backgroundDimmingViewStyle": { "baseStyle": "backgroundDimmingView" },
+        "UIInputMgr": { "enableUIControlsNavigation": true },
+        "viewHierarchy": {
+          "addControlListener": true,
+          "views": {
+            "_BPSUIPanel:menu": {
+              "transform": {
+                "width@f": -1.0,
+                "height@f": -1.0,
+                "x@f": 0.0,
+                "y@f": 0.0,
+                "anchorX@f": 0.5,
+                "anchorY@f": 0.5
+              },
+              "style": {
+                "frame": {
+                  "textures": {
+                    "texture:frame": {
+                      "resource_texture": "project-Marathon/art/ui/frames/menu-frame-01~inset-36~.png"
+                    }
+                  }
+                },
+                "content": {
+                  "transform": {
+                    "x@f": 0.0,
+                    "y@f": 0.0,
+                    "anchorX@f": 0.5,
+                    "anchorY@f": 0.5,
+                    "parentBoundsAlignX@f": 0.5,
+                    "parentBoundsAlignY@f": 0.5
+                  },
+                  "style": {
+                    "layout": "vertical",
+                    "stride@f": -20.0,
+                    "autoWidth": true,
+                    "autoHeight": true,
+                    "horizontalPadding@f": 60.0,
+                    "verticalPadding@f": 45.0,
+                    "alignment@f": 0.5
+                  }
+                }
+              },
+              "content": {
+                "_BPSBitmapTextView:title": {
+                  "text": "MORE GAMES",
+                  "style": {
+                    "resource_font": "project-Marathon/art/fonts/AvenirNextBold26"
+                  }
+                },
+                "_BPSUIButton:play_tetrisgems": {
+                  "URL": "https://tetris.com/play-tetrisgems",
+                  "style": {
+                    "baseStyle": "menus.moreGamesButton",
+                    "contentImage": {
+                      "textures": {
+                        "texture:off": {
+                          "resource_texture": "project-Marathon/art/ui/moreGamesButtons/game--gems--normal.png"
+                        }
+                      }
+                    }
+                  }
+                },
+                "_BPSUIButton:play_tetrismindbender": {
+                  "URL": "https://tetris.com/play-tetrismindbender",
+                  "style": {
+                    "baseStyle": "menus.moreGamesButton",
+                    "contentImage": {
+                      "textures": {
+                        "texture:off": {
+                          "resource_texture": "project-Marathon/art/ui/moreGamesButtons/game--play-tetrismindbender--normal.png"
+                        }
+                      }
+                    }
+                  }
+                },
+                "_BPSUIButton:done": {
+                  "offText": "DONE",
+                  "transform": { "width@f": 80.0, "height@f": 40.0 },
+                  "style": { "baseStyle": "menus.smallMenuButton" }
+                }
+              }
+            }
+          }
+        }
+      },
+      "confirm": {
+        "deferConstruct": true,
+        "inputBlockingDelayMSEC@i": 100,
+        "hideOnSuspend": true,
+        "backgroundDimmingViewStyle": { "baseStyle": "backgroundDimmingView" },
+        "UIInputMgr": { "enableUIControlsNavigation": true },
+        "viewHierarchy": {
+          "addControlListener": true,
+          "views": {
+            "_BPSUIPanel:menu": {
+              "transform": {
+                "width@f": -1.0,
+                "height@f": -1.0,
+                "x@f": 0.0,
+                "y@f": 0.0,
+                "anchorX@f": 0.5,
+                "anchorY@f": 0.5
+              },
+              "style": {
+                "frame": {
+                  "textures": {
+                    "texture:frame": {
+                      "resource_texture": "project-Marathon/art/ui/frames/menu-frame-01~inset-36~.png"
+                    }
+                  }
+                },
+                "content": {
+                  "transform": {
+                    "x@f": 0.0,
+                    "y@f": 0.0,
+                    "anchorX@f": 0.5,
+                    "anchorY@f": 0.5,
+                    "parentBoundsAlignX@f": 0.5,
+                    "parentBoundsAlignY@f": 0.5
+                  },
+                  "style": {
+                    "layout": "vertical",
+                    "stride@f": -5.0,
+                    "autoWidth": true,
+                    "autoHeight": true,
+                    "horizontalPadding@f": 60.0,
+                    "verticalPadding@f": 50.0,
+                    "alignment@f": 0.5
+                  }
+                }
+              },
+              "content": {
+                "_BPSBitmapTextView:title": {
+                  "text": "CONFIRM?",
+                  "style": {
+                    "resource_font": "project-Marathon/art/fonts/AvenirNextBold18"
+                  }
+                },
+                "_BPSView:space": { "transform": { "height@f": 10.0 } },
+                "_BPSUIButton:ok": {
+                  "offText": "OK",
+                  "style": { "baseStyle": "menus.menuButton" }
+                },
+                "_BPSUIButton:cancel": {
+                  "offText": "CANCEL",
+                  "style": { "baseStyle": "menus.menuButton" }
+                }
+              }
+            }
+          }
+        }
+      },
+      "interstitialAd~platforms-html5desktop,unitymobile,html5mobile": {
+        "deferConstruct": true,
+        "inputBlockingDelayMSEC@i": -1,
+        "hideOnSuspend": true,
+        "backgroundDimmingViewStyle": { "baseStyle": "backgroundDimmingView" },
+        "UIInputMgr": { "enableUIControlsNavigation": false },
+        "viewHierarchy": { "addControlListener": false, "views": {} }
+      },
+      "newHighScore": {
+        "enabled": true,
+        "deferConstruct": true,
+        "inputBlockingDelayMSEC@i": 500,
+        "hideOnSuspend": true,
+        "backgroundDimmingViewStyle": { "baseStyle": "backgroundDimmingView" },
+        "UIInputMgr": { "enableUIControlsNavigation": true },
+        "viewHierarchy": {
+          "addControlListener": true,
+          "views": {
+            "_BPSUIPanel:menu": {
+              "transform": {
+                "width@f": -1.0,
+                "height@f": -1.0,
+                "x@f": 0.0,
+                "y@f": 0.0,
+                "anchorX@f": 0.5,
+                "anchorY@f": 0.5
+              },
+              "style": {
+                "frame": {
+                  "textures": {
+                    "texture:frame": {
+                      "resource_texture": "project-Marathon/art/ui/frames/menu-frame-01~inset-36~.png"
+                    }
+                  }
+                },
+                "content": {
+                  "transform": {
+                    "x@f": 0.0,
+                    "y@f": 4.0,
+                    "anchorX@f": 0.5,
+                    "anchorY@f": 0.5,
+                    "parentBoundsAlignX@f": 0.5,
+                    "parentBoundsAlignY@f": 0.5
+                  },
+                  "style": {
+                    "layout": "vertical",
+                    "stride@f": 0.0,
+                    "autoWidth": true,
+                    "autoHeight": true,
+                    "horizontalPadding@f": 45.0,
+                    "verticalPadding@f": 40.0,
+                    "alignment@f": 0.5
+                  }
+                }
+              },
+              "content": {
+                "_BPSBitmapTextView:title": {
+                  "text": "NEW HIGH SCORE!",
+                  "style": {
+                    "resource_font": "project-Marathon/art/fonts/AvenirNextBold26"
+                  }
+                },
+                "_BPSView:space": { "transform": { "height@f": 7.0 } },
+                "_BPSBitmapTextView:score": {
+                  "text": "0",
+                  "style": {
+                    "resource_font": "project-Marathon/art/fonts/AvenirNextBold34"
+                  }
+                },
+                "_BPSView:space-1~platforms-osx,unitydesktop,html5desktop": {
+                  "transform": { "height@f": 7.0 }
+                },
+                "_BPSBitmapTextView:enterInitials~platforms-osx,unitydesktop,html5desktop": {
+                  "enabled": false,
+                  "text": "ENTER YOUR INITIALS:",
+                  "style": {
+                    "resource_font": "project-Marathon/art/fonts/AvenirNextBold16"
+                  }
+                },
+                "_BPSView:space-2~platforms-osx,unitydesktop,html5desktop": {
+                  "enabled": false,
+                  "transform": { "height@f": 15.0 }
+                },
+                "_BPSScale9Sprite:nameFrame~platforms-osx,unitydesktop,html5desktop": {
+                  "enabled": false,
+                  "resource_texture": "project-Marathon/art/ui/frames/frame-03~inset-8~.png",
+                  "transform": { "width@f": 140.0, "height@f": 43.0 },
+                  "children": {
+                    "_BPSBitmapTextView:name": {
+                      "text": "WWW",
+                      "transform": { "width@f": 0.0, "height@f": 0.0 },
+                      "style": {
+                        "resource_font": "project-Marathon/art/fonts/AvenirNextBold34"
+                      }
+                    }
+                  }
+                },
+                "_BPSView:false": {
+                  "enabled": true,
+                  "transform": { "height@f": 7.0 }
+                },
+                "_BPSUIButton:ok": {
+                  "offText": "OK",
+                  "transform": { "width@f": 100.0, "height@f": 52.0 },
+                  "style": { "baseStyle": "menus.menuButton" }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "gameMgr": {
+    "timestepMSEC@i": 0,
+    "platforms": { "HTML5": {} },
+    "game": {
+      "params": {
+        "numPlayers@i": 1,
+        "waitForReadyPlayersToStartGame": false,
+        "waitTimeWithZeroReadyPlayersSEC@i": 0,
+        "waitTimeWithAnyReadyPlayersSEC@i": 0,
+        "countdownTimeMSEC@i": 2000
+      },
+      "players": {
+        "player-base": {
+          "params": {
+            "matrixWidth@i": 10,
+            "matrixVisibleHeight@i": 20,
+            "matrixSkyBuffer@i": 4,
+            "standardPieceDefinitionsType@i": 1,
+            "pieceQueueCapacity@i": 3,
+            "prefillPieceQueue": true,
+            "pieceBagRefillValues": "I,J,L,O,S,T,Z",
+            "pieceBagRefillMultiplier@i": 1,
+            "pieceBagRNGSeed@i": 0,
+            "generationTimeMSEC@i": 50,
+            "generationOffsetX@i": 0,
+            "generationMinOffsetY@i": -1,
+            "generationMaxOffsetY@i": 0,
+            "generationFacing": "N",
+            "minoShatterTimeMSEC@i": 200,
+            "minoKillTimeMSEC@i": 200,
+            "isMatrixGravityLimited": true,
+            "matrixGravityMSECPerLineMax@i": 50,
+            "matrixGravityMSECPerLineMin@i": 50,
+            "matrixGravityMSECPerLineDeltaPerSEC@i": 0,
+            "isLineClearAvalancheEnabled": false,
+            "cascadeTimeScaleFXPT@i": 1000,
+            "cascadeTimeScaleMinFXPT@i": 1000,
+            "timeLimitSEC@i": 0,
+            "autoHardDropOnTimeExpired": false,
+            "endGameOnTopout": true,
+            "topoutMatrixClearNumRows@i": 10,
+            "topoutMatrixClearTimeMSEC@i": 500
+          },
+          "playerComponents": {
+            "control": {
+              "enabled": true,
+              "params": {
+                "pointerInputType@i": 1,
+                "pointerInputType-platforms": {
+                  "html5mobile@i": 2,
+                  "unitymobile@i": 2
+                },
+                "fallTimerType@i": 1,
+                "normalFallSpeedMSEC@i": 1000,
+                "softDropFallSpeedMSEC@i": 50,
+                "lockTimeMSEC@i": 500,
+                "resetLockTimerOnMoveOrRotate": true,
+                "enableSoftDropInstantLock": false,
+                "allowInfiniteHold": false,
+                "initialActiveInputType": "direct",
+                "enableAutomaticInputTypeSwitching": true,
+                "AIInput": {
+                  "enabled": false,
+                  "enablePieceFall": true,
+                  "enableLockTimer": true,
+                  "enableHardDrop": true,
+                  "firstActionMinDelayMSEC@i": 200,
+                  "firstActionMaxDelayMSEC@i": 200,
+                  "actionPreDelayMSEC@i": 50,
+                  "evaluation": {
+                    "singleLineClear@i": -50,
+                    "doubleLineClear@i": 0,
+                    "tripleLineClear@i": 0,
+                    "tetrisLineClear@i": 0,
+                    "perTouchedNSurface@i": 15,
+                    "perTouchedSSurface@i": 10,
+                    "perTouchedESurface@i": 10,
+                    "perTouchedWSurface@i": 10,
+                    "perRowFit@i": 0,
+                    "touchingRightWall@i": -15,
+                    "perCave@i": -30,
+                    "holeCheckDepthLimit@i": 1,
+                    "perHole@i": -50,
+                    "perCoveredISlotDepth@i": -10,
+                    "coveredISlotMaxTopDepth@i": 1,
+                    "coveredISlotMaxSize@i": 4,
+                    "NFacingVSEquivalent@i": -2,
+                    "maxMinoYMultiplier@i": -5,
+                    "digModeActivationHeight@i": 8
+                  }
+                },
+                "directInput": {
+                  "enabled": true,
+                  "enableMoveAutoRepeat": true,
+                  "moveAutoRepeatInitialDelayMSEC@i": 170,
+                  "moveAutoRepeatDelayMSEC@i": 50,
+                  "placementsAllowedBeforeLock@i": 15,
+                  "controls": {
+                    "directMoveLeft": "Keyboard.LeftArrow",
+                    "directMoveRight": "Keyboard.RightArrow",
+                    "directRotateCW": "Keyboard.UpArrow",
+                    "directRotateCCW": "Keyboard.Z",
+                    "directSoftDrop": "Keyboard.DownArrow",
+                    "directHardDrop": "Keyboard.Space",
+                    "directHold": "Keyboard.C",
+                    "directActivateNextQueuedPendingAction": ""
+                  },
+                  "controls-platforms": {
+                    "unitymobile": {
+                      "directMoveLeft": "Gamepad.DPadLeft",
+                      "directMoveRight": "Gamepad.DPadRight",
+                      "directRotateCW": "Gamepad.EastButton",
+                      "directRotateCCW": "Gamepad.SouthButton",
+                      "directSoftDrop": "Gamepad.DPadDown",
+                      "directHardDrop": "Gamepad.DPadUp",
+                      "directHold": "Gamepad.RightShoulder",
+                      "directActivateNextQueuedPendingAction": ""
+                    }
+                  }
+                },
+                "smartInput": {
+                  "enabled": true,
+                  "setTransformsWithActions": true,
+                  "generationOffsetY@i": 1,
+                  "isTargetFacingFixed": false,
+                  "cellTrackingInsetFXPT@i": 100,
+                  "restrictReachableTransforms": false,
+                  "searchCellForTarget": true,
+                  "searchColumnForTarget": true,
+                  "lockLivePieceAtTarget": true,
+                  "snapToTargetOnTouchDownFallSpeedMSEC@i": 20,
+                  "updateTargetWhilePointerInputIsOff": true,
+                  "selectTargetAtPointerInputOn": true,
+                  "pointerSelectTargetMatrixBufferX@i": 1000,
+                  "pointerSelectTargetMatrixBufferY@i": 1000,
+                  "pointerSmoothingWeightFXPT@i": 0,
+                  "forceValidTarget": true,
+                  "placementsAllowedBeforeLock@i": 30,
+                  "pathStepDelayMSEC@i": 0,
+                  "evaluation": {
+                    "singleLineClear@i": 0,
+                    "doubleLineClear@i": 0,
+                    "tripleLineClear@i": 0,
+                    "tetrisLineClear@i": 0,
+                    "perTouchedNSurface@i": 10,
+                    "perTouchedSSurface@i": 10,
+                    "perTouchedESurface@i": 0,
+                    "perTouchedWSurface@i": 0,
+                    "perRowFit@i": 10,
+                    "touchingRightWall@i": -15,
+                    "perCave@i": -35,
+                    "holeCheckDepthLimit@i": 1,
+                    "perHole@i": -50,
+                    "perCoveredISlotDepth@i": 0,
+                    "coveredISlotMaxTopDepth@i": 0,
+                    "coveredISlotMaxSize@i": 4,
+                    "NFacingVSEquivalent@i": -2,
+                    "maxMinoYMultiplier@i": -5,
+                    "digModeActivationHeight@i": 9999
+                  },
+                  "controls": {
+                    "smartPointerPosition": "GamePointer.Pointer1",
+                    "smartPointerOnOff": "GamePointer.Pointer1",
+                    "smartMoveTargetLeft": "",
+                    "smartMoveTargetRight": "",
+                    "smartCycleTarget": "",
+                    "smartSelectTarget": "Keyboard.Space",
+                    "smartHold": "GamePointer.Pointer2",
+                    "smartRotateTargetFacingCW": "",
+                    "smartRotateTargetFacingCCW": "",
+                    "smartActivateNextQueuedPendingAction": ""
+                  }
+                },
+                "gestureInput": {
+                  "enabled": true,
+                  "maxRotationTapDistanceFXPT@i": 1399,
+                  "maxRotationTapTimeMSEC@i": 1000,
+                  "enableCCWRotation": false,
+                  "moveLRDragDistanceXFXPT@i": 1400,
+                  "minSoftDropDragDistanceYFXPT@i": 2000,
+                  "minSoftDropDragVelocityYFXPT@i": 4000,
+                  "minStopSoftDropDragDistanceYFXPT@i": 1000,
+                  "minStopSoftDropDragVelocityYFXPT@i": 1000,
+                  "minHardDropDragDistanceYFXPT@i": 1500,
+                  "minHardDropDragVelocityYFXPT@i": 8000,
+                  "minHoldDragDistanceYFXPT@i": 1500,
+                  "minHoldDragVelocityYFXPT@i": 8000,
+                  "velocitySmoothingWeightFXPT@i": 900,
+                  "controls": {
+                    "gesturePointerPosition": "GamePointer.Pointer1",
+                    "gesturePointerOnOff": "GamePointer.Pointer1",
+                    "gestureHold": "GamePointer.Pointer2",
+                    "gestureActivateNextQueuedPendingAction": ""
+                  }
+                }
+              }
+            },
+            "score": {
+              "enabled": true,
+              "params": {
+                "scoreMultiplier@i": 1,
+                "scoreForSingle@i": 100,
+                "scoreForDouble@i": 300,
+                "scoreForTriple@i": 500,
+                "scoreForTetris@i": 800,
+                "scoreForCascadeLine@i": 100,
+                "scoreForTSpin@i": 400,
+                "scoreForTSpinSingle@i": 800,
+                "scoreForTSpinDouble@i": 1200,
+                "scoreForTSpinTriple@i": 1600,
+                "scoreForMiniTSpin@i": 100,
+                "scoreForMiniTSpinSingle@i": 200,
+                "scoreForSoftDropStep@i": 1,
+                "scoreForHardDropStep@i": 2,
+                "applyMultiplierToSoftAndHardDrop": false,
+                "scoreForComboClear@i": 50,
+                "scoreForPerfectClearSingle@i": 800,
+                "scoreForPerfectClearDouble@i": 1200,
+                "scoreForPerfectClearTriple@i": 1800,
+                "scoreForPerfectClearTetris@i": 2000,
+                "scoreForPerfectClearBackToBackTetris@i": 3200,
+                "backToBackBonusMultiplierFXPT@i": 1500
+              }
+            },
+            "levels": {
+              "enabled": true,
+              "params": {
+                "startingLevelIndex@i": 0,
+                "onboarding": {
+                  "isRequired": false,
+                  "finalLevelId": "",
+                  "isDirectInputSupported": true,
+                  "isSmartInputSupported": true,
+                  "isGestureInputSupported": true
+                },
+                "maxLevelId": "30",
+                "endGameAtMaxLevelCompletion": true,
+                "allowMatrixSettlementAtGameCompletion": true,
+                "isStartingLineGoalCumulative": false,
+                "multiplyScoreByLevel": true,
+                "carryLineClearsAcrossLevelUp": true,
+                "awardedLinesForSingle@i": 1,
+                "awardedLinesForDouble@i": 2,
+                "awardedLinesForTriple@i": 3,
+                "awardedLinesForTetris@i": 4,
+                "awardedLinesForCascadeLine@i": 1,
+                "awardedLinesForTSpinSingle@i": 1,
+                "awardedLinesForTSpinDouble@i": 2,
+                "awardedLinesForTSpinTriple@i": 3,
+                "awardedLinesForMiniTSpinSingle@i": 1,
+                "awardedLinesBackToBackBonusMultiplierFXPT@i": 1000,
+                "levels": [
+                  {
+                    "id": "1",
+                    "displayName": "1",
+                    "matrix": {
+                      "width@i": 10,
+                      "visibleHeight@i": 20,
+                      "skyBuffer@i": 4,
+                      "minos": []
+                    },
+                    "pieceBagStartingSequence": "",
+                    "pieceBagRefillValues": "I,J,L,O,S,T,Z",
+                    "pieceBagRefillMultiplier@i": 1,
+                    "resetNextQueue": false,
+                    "controls": "all",
+                    "generationTimeMSEC@i": 50,
+                    "normalFallSpeedMSECPerLine@i": 1000,
+                    "softDropSpeedMSECPerLine@i": -20,
+                    "maxNormalFallSteps@i": -1,
+                    "lockTimeMSEC@i": 500,
+                    "minoKillTimeMSEC@i": 200,
+                    "suspendPieceActivity": false,
+                    "endCondition": {
+                      "type": "lineClears",
+                      "targetValue@i": 10
+                    },
+                    "dispatchLevelUpMessage": true,
+                    "postBreak": false
+                  },
+                  {
+                    "id": "2",
+                    "displayName": "2",
+                    "matrix": {
+                      "width@i": 10,
+                      "visibleHeight@i": 20,
+                      "skyBuffer@i": 4,
+                      "minos": []
+                    },
+                    "pieceBagStartingSequence": "",
+                    "pieceBagRefillValues": "I,J,L,O,S,T,Z",
+                    "pieceBagRefillMultiplier@i": 1,
+                    "resetNextQueue": false,
+                    "controls": "all",
+                    "generationTimeMSEC@i": 50,
+                    "normalFallSpeedMSECPerLine@i": 793,
+                    "softDropSpeedMSECPerLine@i": -20,
+                    "maxNormalFallSteps@i": -1,
+                    "lockTimeMSEC@i": 500,
+                    "minoKillTimeMSEC@i": 200,
+                    "suspendPieceActivity": false,
+                    "endCondition": {
+                      "type": "lineClears",
+                      "targetValue@i": 10
+                    },
+                    "dispatchLevelUpMessage": true,
+                    "postBreak": false
+                  },
+                  {
+                    "id": "3",
+                    "displayName": "3",
+                    "matrix": {
+                      "width@i": 10,
+                      "visibleHeight@i": 20,
+                      "skyBuffer@i": 4,
+                      "minos": []
+                    },
+                    "pieceBagStartingSequence": "",
+                    "pieceBagRefillValues": "I,J,L,O,S,T,Z",
+                    "pieceBagRefillMultiplier@i": 1,
+                    "resetNextQueue": false,
+                    "controls": "all",
+                    "generationTimeMSEC@i": 50,
+                    "normalFallSpeedMSECPerLine@i": 618,
+                    "softDropSpeedMSECPerLine@i": -20,
+                    "maxNormalFallSteps@i": -1,
+                    "lockTimeMSEC@i": 500,
+                    "minoKillTimeMSEC@i": 200,
+                    "suspendPieceActivity": false,
+                    "endCondition": {
+                      "type": "lineClears",
+                      "targetValue@i": 10
+                    },
+                    "dispatchLevelUpMessage": true,
+                    "postBreak": false
+                  },
+                  {
+                    "id": "4",
+                    "displayName": "4",
+                    "matrix": {
+                      "width@i": 10,
+                      "visibleHeight@i": 20,
+                      "skyBuffer@i": 4,
+                      "minos": []
+                    },
+                    "pieceBagStartingSequence": "",
+                    "pieceBagRefillValues": "I,J,L,O,S,T,Z",
+                    "pieceBagRefillMultiplier@i": 1,
+                    "resetNextQueue": false,
+                    "controls": "all",
+                    "generationTimeMSEC@i": 50,
+                    "normalFallSpeedMSECPerLine@i": 473,
+                    "softDropSpeedMSECPerLine@i": -20,
+                    "maxNormalFallSteps@i": -1,
+                    "lockTimeMSEC@i": 500,
+                    "minoKillTimeMSEC@i": 200,
+                    "suspendPieceActivity": false,
+                    "endCondition": {
+                      "type": "lineClears",
+                      "targetValue@i": 10
+                    },
+                    "dispatchLevelUpMessage": true,
+                    "postBreak": false
+                  },
+                  {
+                    "id": "5",
+                    "displayName": "5",
+                    "matrix": {
+                      "width@i": 10,
+                      "visibleHeight@i": 20,
+                      "skyBuffer@i": 4,
+                      "minos": []
+                    },
+                    "pieceBagStartingSequence": "",
+                    "pieceBagRefillValues": "I,J,L,O,S,T,Z",
+                    "pieceBagRefillMultiplier@i": 1,
+                    "resetNextQueue": false,
+                    "controls": "all",
+                    "generationTimeMSEC@i": 50,
+                    "normalFallSpeedMSECPerLine@i": 355,
+                    "softDropSpeedMSECPerLine@i": -20,
+                    "maxNormalFallSteps@i": -1,
+                    "lockTimeMSEC@i": 500,
+                    "minoKillTimeMSEC@i": 200,
+                    "suspendPieceActivity": false,
+                    "endCondition": {
+                      "type": "lineClears",
+                      "targetValue@i": 10
+                    },
+                    "dispatchLevelUpMessage": true,
+                    "postBreak": false
+                  },
+                  {
+                    "id": "6",
+                    "displayName": "6",
+                    "matrix": {
+                      "width@i": 10,
+                      "visibleHeight@i": 20,
+                      "skyBuffer@i": 4,
+                      "minos": []
+                    },
+                    "pieceBagStartingSequence": "",
+                    "pieceBagRefillValues": "I,J,L,O,S,T,Z",
+                    "pieceBagRefillMultiplier@i": 1,
+                    "resetNextQueue": false,
+                    "controls": "all",
+                    "generationTimeMSEC@i": 50,
+                    "normalFallSpeedMSECPerLine@i": 262,
+                    "softDropSpeedMSECPerLine@i": -20,
+                    "maxNormalFallSteps@i": -1,
+                    "lockTimeMSEC@i": 500,
+                    "minoKillTimeMSEC@i": 200,
+                    "suspendPieceActivity": false,
+                    "endCondition": {
+                      "type": "lineClears",
+                      "targetValue@i": 10
+                    },
+                    "dispatchLevelUpMessage": true,
+                    "postBreak": false
+                  },
+                  {
+                    "id": "7",
+                    "displayName": "7",
+                    "matrix": {
+                      "width@i": 10,
+                      "visibleHeight@i": 20,
+                      "skyBuffer@i": 4,
+                      "minos": []
+                    },
+                    "pieceBagStartingSequence": "",
+                    "pieceBagRefillValues": "I,J,L,O,S,T,Z",
+                    "pieceBagRefillMultiplier@i": 1,
+                    "resetNextQueue": false,
+                    "controls": "all",
+                    "generationTimeMSEC@i": 50,
+                    "normalFallSpeedMSECPerLine@i": 190,
+                    "softDropSpeedMSECPerLine@i": -20,
+                    "maxNormalFallSteps@i": -1,
+                    "lockTimeMSEC@i": 500,
+                    "minoKillTimeMSEC@i": 200,
+                    "suspendPieceActivity": false,
+                    "endCondition": {
+                      "type": "lineClears",
+                      "targetValue@i": 10
+                    },
+                    "dispatchLevelUpMessage": true,
+                    "postBreak": false
+                  },
+                  {
+                    "id": "8",
+                    "displayName": "8",
+                    "matrix": {
+                      "width@i": 10,
+                      "visibleHeight@i": 20,
+                      "skyBuffer@i": 4,
+                      "minos": []
+                    },
+                    "pieceBagStartingSequence": "",
+                    "pieceBagRefillValues": "I,J,L,O,S,T,Z",
+                    "pieceBagRefillMultiplier@i": 1,
+                    "resetNextQueue": false,
+                    "controls": "all",
+                    "generationTimeMSEC@i": 50,
+                    "normalFallSpeedMSECPerLine@i": 135,
+                    "softDropSpeedMSECPerLine@i": -20,
+                    "maxNormalFallSteps@i": -1,
+                    "lockTimeMSEC@i": 500,
+                    "minoKillTimeMSEC@i": 200,
+                    "suspendPieceActivity": false,
+                    "endCondition": {
+                      "type": "lineClears",
+                      "targetValue@i": 10
+                    },
+                    "dispatchLevelUpMessage": true,
+                    "postBreak": false
+                  },
+                  {
+                    "id": "9",
+                    "displayName": "9",
+                    "matrix": {
+                      "width@i": 10,
+                      "visibleHeight@i": 20,
+                      "skyBuffer@i": 4,
+                      "minos": []
+                    },
+                    "pieceBagStartingSequence": "",
+                    "pieceBagRefillValues": "I,J,L,O,S,T,Z",
+                    "pieceBagRefillMultiplier@i": 1,
+                    "resetNextQueue": false,
+                    "controls": "all",
+                    "generationTimeMSEC@i": 50,
+                    "normalFallSpeedMSECPerLine@i": 94,
+                    "softDropSpeedMSECPerLine@i": -20,
+                    "maxNormalFallSteps@i": -1,
+                    "lockTimeMSEC@i": 500,
+                    "minoKillTimeMSEC@i": 200,
+                    "suspendPieceActivity": false,
+                    "endCondition": {
+                      "type": "lineClears",
+                      "targetValue@i": 10
+                    },
+                    "dispatchLevelUpMessage": true,
+                    "postBreak": false
+                  },
+                  {
+                    "id": "10",
+                    "displayName": "10",
+                    "matrix": {
+                      "width@i": 10,
+                      "visibleHeight@i": 20,
+                      "skyBuffer@i": 4,
+                      "minos": []
+                    },
+                    "pieceBagStartingSequence": "",
+                    "pieceBagRefillValues": "I,J,L,O,S,T,Z",
+                    "pieceBagRefillMultiplier@i": 1,
+                    "resetNextQueue": false,
+                    "controls": "all",
+                    "generationTimeMSEC@i": 50,
+                    "normalFallSpeedMSECPerLine@i": 64,
+                    "softDropSpeedMSECPerLine@i": -20,
+                    "maxNormalFallSteps@i": -1,
+                    "lockTimeMSEC@i": 500,
+                    "minoKillTimeMSEC@i": 200,
+                    "suspendPieceActivity": false,
+                    "endCondition": {
+                      "type": "lineClears",
+                      "targetValue@i": 10
+                    },
+                    "dispatchLevelUpMessage": true,
+                    "postBreak": false
+                  },
+                  {
+                    "id": "11",
+                    "displayName": "11",
+                    "matrix": {
+                      "width@i": 10,
+                      "visibleHeight@i": 20,
+                      "skyBuffer@i": 4,
+                      "minos": []
+                    },
+                    "pieceBagStartingSequence": "",
+                    "pieceBagRefillValues": "I,J,L,O,S,T,Z",
+                    "pieceBagRefillMultiplier@i": 1,
+                    "resetNextQueue": false,
+                    "controls": "all",
+                    "generationTimeMSEC@i": 50,
+                    "normalFallSpeedMSECPerLine@i": 43,
+                    "softDropSpeedMSECPerLine@i": -20,
+                    "maxNormalFallSteps@i": -1,
+                    "lockTimeMSEC@i": 500,
+                    "minoKillTimeMSEC@i": 200,
+                    "suspendPieceActivity": false,
+                    "endCondition": {
+                      "type": "lineClears",
+                      "targetValue@i": 10
+                    },
+                    "dispatchLevelUpMessage": true,
+                    "postBreak": false
+                  },
+                  {
+                    "id": "12",
+                    "displayName": "12",
+                    "matrix": {
+                      "width@i": 10,
+                      "visibleHeight@i": 20,
+                      "skyBuffer@i": 4,
+                      "minos": []
+                    },
+                    "pieceBagStartingSequence": "",
+                    "pieceBagRefillValues": "I,J,L,O,S,T,Z",
+                    "pieceBagRefillMultiplier@i": 1,
+                    "resetNextQueue": false,
+                    "controls": "all",
+                    "generationTimeMSEC@i": 50,
+                    "normalFallSpeedMSECPerLine@i": 28,
+                    "softDropSpeedMSECPerLine@i": -20,
+                    "maxNormalFallSteps@i": -1,
+                    "lockTimeMSEC@i": 500,
+                    "minoKillTimeMSEC@i": 200,
+                    "suspendPieceActivity": false,
+                    "endCondition": {
+                      "type": "lineClears",
+                      "targetValue@i": 10
+                    },
+                    "dispatchLevelUpMessage": true,
+                    "postBreak": false
+                  },
+                  {
+                    "id": "13",
+                    "displayName": "13",
+                    "matrix": {
+                      "width@i": 10,
+                      "visibleHeight@i": 20,
+                      "skyBuffer@i": 4,
+                      "minos": []
+                    },
+                    "pieceBagStartingSequence": "",
+                    "pieceBagRefillValues": "I,J,L,O,S,T,Z",
+                    "pieceBagRefillMultiplier@i": 1,
+                    "resetNextQueue": false,
+                    "controls": "all",
+                    "generationTimeMSEC@i": 50,
+                    "normalFallSpeedMSECPerLine@i": 18,
+                    "softDropSpeedMSECPerLine@i": -20,
+                    "maxNormalFallSteps@i": -1,
+                    "lockTimeMSEC@i": 500,
+                    "minoKillTimeMSEC@i": 200,
+                    "suspendPieceActivity": false,
+                    "endCondition": {
+                      "type": "lineClears",
+                      "targetValue@i": 10
+                    },
+                    "dispatchLevelUpMessage": true,
+                    "postBreak": false
+                  },
+                  {
+                    "id": "14",
+                    "displayName": "14",
+                    "matrix": {
+                      "width@i": 10,
+                      "visibleHeight@i": 20,
+                      "skyBuffer@i": 4,
+                      "minos": []
+                    },
+                    "pieceBagStartingSequence": "",
+                    "pieceBagRefillValues": "I,J,L,O,S,T,Z",
+                    "pieceBagRefillMultiplier@i": 1,
+                    "resetNextQueue": false,
+                    "controls": "all",
+                    "generationTimeMSEC@i": 50,
+                    "normalFallSpeedMSECPerLine@i": 11,
+                    "softDropSpeedMSECPerLine@i": -20,
+                    "maxNormalFallSteps@i": -1,
+                    "lockTimeMSEC@i": 500,
+                    "minoKillTimeMSEC@i": 200,
+                    "suspendPieceActivity": false,
+                    "endCondition": {
+                      "type": "lineClears",
+                      "targetValue@i": 10
+                    },
+                    "dispatchLevelUpMessage": true,
+                    "postBreak": false
+                  },
+                  {
+                    "id": "15",
+                    "displayName": "15",
+                    "matrix": {
+                      "width@i": 10,
+                      "visibleHeight@i": 20,
+                      "skyBuffer@i": 4,
+                      "minos": []
+                    },
+                    "pieceBagStartingSequence": "",
+                    "pieceBagRefillValues": "I,J,L,O,S,T,Z",
+                    "pieceBagRefillMultiplier@i": 1,
+                    "resetNextQueue": false,
+                    "controls": "all",
+                    "generationTimeMSEC@i": 50,
+                    "normalFallSpeedMSECPerLine@i": 7,
+                    "softDropSpeedMSECPerLine@i": -20,
+                    "maxNormalFallSteps@i": -1,
+                    "lockTimeMSEC@i": 500,
+                    "minoKillTimeMSEC@i": 200,
+                    "suspendPieceActivity": false,
+                    "endCondition": {
+                      "type": "lineClears",
+                      "targetValue@i": 10
+                    },
+                    "dispatchLevelUpMessage": true,
+                    "postBreak": false
+                  },
+                  {
+                    "id": "16",
+                    "displayName": "16",
+                    "matrix": {
+                      "width@i": 10,
+                      "visibleHeight@i": 20,
+                      "skyBuffer@i": 4,
+                      "minos": []
+                    },
+                    "pieceBagStartingSequence": "",
+                    "pieceBagRefillValues": "I,J,L,O,S,T,Z",
+                    "pieceBagRefillMultiplier@i": 1,
+                    "resetNextQueue": false,
+                    "controls": "all",
+                    "generationTimeMSEC@i": 50,
+                    "normalFallSpeedMSECPerLine@i": 4,
+                    "softDropSpeedMSECPerLine@i": -20,
+                    "maxNormalFallSteps@i": -1,
+                    "lockTimeMSEC@i": 500,
+                    "minoKillTimeMSEC@i": 200,
+                    "suspendPieceActivity": false,
+                    "endCondition": {
+                      "type": "lineClears",
+                      "targetValue@i": 10
+                    },
+                    "dispatchLevelUpMessage": true,
+                    "postBreak": false
+                  },
+                  {
+                    "id": "17",
+                    "displayName": "17",
+                    "matrix": {
+                      "width@i": 10,
+                      "visibleHeight@i": 20,
+                      "skyBuffer@i": 4,
+                      "minos": []
+                    },
+                    "pieceBagStartingSequence": "",
+                    "pieceBagRefillValues": "I,J,L,O,S,T,Z",
+                    "pieceBagRefillMultiplier@i": 1,
+                    "resetNextQueue": false,
+                    "controls": "all",
+                    "generationTimeMSEC@i": 50,
+                    "normalFallSpeedMSECPerLine@i": 3,
+                    "softDropSpeedMSECPerLine@i": -20,
+                    "maxNormalFallSteps@i": -1,
+                    "lockTimeMSEC@i": 500,
+                    "minoKillTimeMSEC@i": 200,
+                    "suspendPieceActivity": false,
+                    "endCondition": {
+                      "type": "lineClears",
+                      "targetValue@i": 10
+                    },
+                    "dispatchLevelUpMessage": true,
+                    "postBreak": false
+                  },
+                  {
+                    "id": "18",
+                    "displayName": "18",
+                    "matrix": {
+                      "width@i": 10,
+                      "visibleHeight@i": 20,
+                      "skyBuffer@i": 4,
+                      "minos": []
+                    },
+                    "pieceBagStartingSequence": "",
+                    "pieceBagRefillValues": "I,J,L,O,S,T,Z",
+                    "pieceBagRefillMultiplier@i": 1,
+                    "resetNextQueue": false,
+                    "controls": "all",
+                    "generationTimeMSEC@i": 50,
+                    "normalFallSpeedMSECPerLine@i": 2,
+                    "softDropSpeedMSECPerLine@i": -20,
+                    "maxNormalFallSteps@i": -1,
+                    "lockTimeMSEC@i": 500,
+                    "minoKillTimeMSEC@i": 200,
+                    "suspendPieceActivity": false,
+                    "endCondition": {
+                      "type": "lineClears",
+                      "targetValue@i": 10
+                    },
+                    "dispatchLevelUpMessage": true,
+                    "postBreak": false
+                  },
+                  {
+                    "id": "19",
+                    "displayName": "19",
+                    "matrix": {
+                      "width@i": 10,
+                      "visibleHeight@i": 20,
+                      "skyBuffer@i": 4,
+                      "minos": []
+                    },
+                    "pieceBagStartingSequence": "",
+                    "pieceBagRefillValues": "I,J,L,O,S,T,Z",
+                    "pieceBagRefillMultiplier@i": 1,
+                    "resetNextQueue": false,
+                    "controls": "all",
+                    "generationTimeMSEC@i": 50,
+                    "normalFallSpeedMSECPerLine@i": 1,
+                    "softDropSpeedMSECPerLine@i": -20,
+                    "maxNormalFallSteps@i": -1,
+                    "lockTimeMSEC@i": 500,
+                    "minoKillTimeMSEC@i": 200,
+                    "suspendPieceActivity": false,
+                    "endCondition": {
+                      "type": "lineClears",
+                      "targetValue@i": 10
+                    },
+                    "dispatchLevelUpMessage": true,
+                    "postBreak": false
+                  },
+                  {
+                    "id": "20",
+                    "displayName": "20",
+                    "matrix": {
+                      "width@i": 10,
+                      "visibleHeight@i": 20,
+                      "skyBuffer@i": 4,
+                      "minos": []
+                    },
+                    "pieceBagStartingSequence": "",
+                    "pieceBagRefillValues": "I,J,L,O,S,T,Z",
+                    "pieceBagRefillMultiplier@i": 1,
+                    "resetNextQueue": false,
+                    "controls": "all",
+                    "generationTimeMSEC@i": 47,
+                    "normalFallSpeedMSECPerLine@i": 0,
+                    "softDropSpeedMSECPerLine@i": -20,
+                    "maxNormalFallSteps@i": -1,
+                    "lockTimeMSEC@i": 450,
+                    "minoKillTimeMSEC@i": 200,
+                    "suspendPieceActivity": false,
+                    "endCondition": {
+                      "type": "lineClears",
+                      "targetValue@i": 10
+                    },
+                    "dispatchLevelUpMessage": true,
+                    "postBreak": false
+                  },
+                  {
+                    "id": "21",
+                    "displayName": "21",
+                    "matrix": {
+                      "width@i": 10,
+                      "visibleHeight@i": 20,
+                      "skyBuffer@i": 4,
+                      "minos": []
+                    },
+                    "pieceBagStartingSequence": "",
+                    "pieceBagRefillValues": "I,J,L,O,S,T,Z",
+                    "pieceBagRefillMultiplier@i": 1,
+                    "resetNextQueue": false,
+                    "controls": "all",
+                    "generationTimeMSEC@i": 43,
+                    "normalFallSpeedMSECPerLine@i": 0,
+                    "softDropSpeedMSECPerLine@i": -20,
+                    "maxNormalFallSteps@i": -1,
+                    "lockTimeMSEC@i": 400,
+                    "minoKillTimeMSEC@i": 200,
+                    "suspendPieceActivity": false,
+                    "endCondition": {
+                      "type": "lineClears",
+                      "targetValue@i": 10
+                    },
+                    "dispatchLevelUpMessage": true,
+                    "postBreak": false
+                  },
+                  {
+                    "id": "22",
+                    "displayName": "22",
+                    "matrix": {
+                      "width@i": 10,
+                      "visibleHeight@i": 20,
+                      "skyBuffer@i": 4,
+                      "minos": []
+                    },
+                    "pieceBagStartingSequence": "",
+                    "pieceBagRefillValues": "I,J,L,O,S,T,Z",
+                    "pieceBagRefillMultiplier@i": 1,
+                    "resetNextQueue": false,
+                    "controls": "all",
+                    "generationTimeMSEC@i": 40,
+                    "normalFallSpeedMSECPerLine@i": 0,
+                    "softDropSpeedMSECPerLine@i": -20,
+                    "maxNormalFallSteps@i": -1,
+                    "lockTimeMSEC@i": 350,
+                    "minoKillTimeMSEC@i": 200,
+                    "suspendPieceActivity": false,
+                    "endCondition": {
+                      "type": "lineClears",
+                      "targetValue@i": 10
+                    },
+                    "dispatchLevelUpMessage": true,
+                    "postBreak": false
+                  },
+                  {
+                    "id": "23",
+                    "displayName": "23",
+                    "matrix": {
+                      "width@i": 10,
+                      "visibleHeight@i": 20,
+                      "skyBuffer@i": 4,
+                      "minos": []
+                    },
+                    "pieceBagStartingSequence": "",
+                    "pieceBagRefillValues": "I,J,L,O,S,T,Z",
+                    "pieceBagRefillMultiplier@i": 1,
+                    "resetNextQueue": false,
+                    "controls": "all",
+                    "generationTimeMSEC@i": 35,
+                    "normalFallSpeedMSECPerLine@i": 0,
+                    "softDropSpeedMSECPerLine@i": -20,
+                    "maxNormalFallSteps@i": -1,
+                    "lockTimeMSEC@i": 300,
+                    "minoKillTimeMSEC@i": 200,
+                    "suspendPieceActivity": false,
+                    "endCondition": {
+                      "type": "lineClears",
+                      "targetValue@i": 10
+                    },
+                    "dispatchLevelUpMessage": true,
+                    "postBreak": false
+                  },
+                  {
+                    "id": "24",
+                    "displayName": "24",
+                    "matrix": {
+                      "width@i": 10,
+                      "visibleHeight@i": 20,
+                      "skyBuffer@i": 4,
+                      "minos": []
+                    },
+                    "pieceBagStartingSequence": "",
+                    "pieceBagRefillValues": "I,J,L,O,S,T,Z",
+                    "pieceBagRefillMultiplier@i": 1,
+                    "resetNextQueue": false,
+                    "controls": "all",
+                    "generationTimeMSEC@i": 30,
+                    "normalFallSpeedMSECPerLine@i": 0,
+                    "softDropSpeedMSECPerLine@i": -20,
+                    "maxNormalFallSteps@i": -1,
+                    "lockTimeMSEC@i": 250,
+                    "minoKillTimeMSEC@i": 200,
+                    "suspendPieceActivity": false,
+                    "endCondition": {
+                      "type": "lineClears",
+                      "targetValue@i": 10
+                    },
+                    "dispatchLevelUpMessage": true,
+                    "postBreak": false
+                  },
+                  {
+                    "id": "25",
+                    "displayName": "25",
+                    "matrix": {
+                      "width@i": 10,
+                      "visibleHeight@i": 20,
+                      "skyBuffer@i": 4,
+                      "minos": []
+                    },
+                    "pieceBagStartingSequence": "",
+                    "pieceBagRefillValues": "I,J,L,O,S,T,Z",
+                    "pieceBagRefillMultiplier@i": 1,
+                    "resetNextQueue": false,
+                    "controls": "all",
+                    "generationTimeMSEC@i": 25,
+                    "normalFallSpeedMSECPerLine@i": 0,
+                    "softDropSpeedMSECPerLine@i": -20,
+                    "maxNormalFallSteps@i": -1,
+                    "lockTimeMSEC@i": 200,
+                    "minoKillTimeMSEC@i": 200,
+                    "suspendPieceActivity": false,
+                    "endCondition": {
+                      "type": "lineClears",
+                      "targetValue@i": 10
+                    },
+                    "dispatchLevelUpMessage": true,
+                    "postBreak": false
+                  },
+                  {
+                    "id": "26",
+                    "displayName": "26",
+                    "matrix": {
+                      "width@i": 10,
+                      "visibleHeight@i": 20,
+                      "skyBuffer@i": 4,
+                      "minos": []
+                    },
+                    "pieceBagStartingSequence": "",
+                    "pieceBagRefillValues": "I,J,L,O,S,T,Z",
+                    "pieceBagRefillMultiplier@i": 1,
+                    "resetNextQueue": false,
+                    "controls": "all",
+                    "generationTimeMSEC@i": 30,
+                    "normalFallSpeedMSECPerLine@i": 0,
+                    "softDropSpeedMSECPerLine@i": -20,
+                    "maxNormalFallSteps@i": -1,
+                    "lockTimeMSEC@i": 195,
+                    "minoKillTimeMSEC@i": 200,
+                    "suspendPieceActivity": false,
+                    "endCondition": {
+                      "type": "lineClears",
+                      "targetValue@i": 10
+                    },
+                    "dispatchLevelUpMessage": true,
+                    "postBreak": false
+                  },
+                  {
+                    "id": "27",
+                    "displayName": "27",
+                    "matrix": {
+                      "width@i": 10,
+                      "visibleHeight@i": 20,
+                      "skyBuffer@i": 4,
+                      "minos": []
+                    },
+                    "pieceBagStartingSequence": "",
+                    "pieceBagRefillValues": "I,J,L,O,S,T,Z",
+                    "pieceBagRefillMultiplier@i": 1,
+                    "resetNextQueue": false,
+                    "controls": "all",
+                    "generationTimeMSEC@i": 15,
+                    "normalFallSpeedMSECPerLine@i": 0,
+                    "softDropSpeedMSECPerLine@i": -20,
+                    "maxNormalFallSteps@i": -1,
+                    "lockTimeMSEC@i": 184,
+                    "minoKillTimeMSEC@i": 200,
+                    "suspendPieceActivity": false,
+                    "endCondition": {
+                      "type": "lineClears",
+                      "targetValue@i": 10
+                    },
+                    "dispatchLevelUpMessage": true,
+                    "postBreak": false
+                  },
+                  {
+                    "id": "28",
+                    "displayName": "28",
+                    "matrix": {
+                      "width@i": 10,
+                      "visibleHeight@i": 20,
+                      "skyBuffer@i": 4,
+                      "minos": []
+                    },
+                    "pieceBagStartingSequence": "",
+                    "pieceBagRefillValues": "I,J,L,O,S,T,Z",
+                    "pieceBagRefillMultiplier@i": 1,
+                    "resetNextQueue": false,
+                    "controls": "all",
+                    "generationTimeMSEC@i": 10,
+                    "normalFallSpeedMSECPerLine@i": 0,
+                    "softDropSpeedMSECPerLine@i": -20,
+                    "maxNormalFallSteps@i": -1,
+                    "lockTimeMSEC@i": 167,
+                    "minoKillTimeMSEC@i": 200,
+                    "suspendPieceActivity": false,
+                    "endCondition": {
+                      "type": "lineClears",
+                      "targetValue@i": 10
+                    },
+                    "dispatchLevelUpMessage": true,
+                    "postBreak": false
+                  },
+                  {
+                    "id": "29",
+                    "displayName": "29",
+                    "matrix": {
+                      "width@i": 10,
+                      "visibleHeight@i": 20,
+                      "skyBuffer@i": 4,
+                      "minos": []
+                    },
+                    "pieceBagStartingSequence": "",
+                    "pieceBagRefillValues": "I,J,L,O,S,T,Z",
+                    "pieceBagRefillMultiplier@i": 1,
+                    "resetNextQueue": false,
+                    "controls": "all",
+                    "generationTimeMSEC@i": 5,
+                    "normalFallSpeedMSECPerLine@i": 0,
+                    "softDropSpeedMSECPerLine@i": -20,
+                    "maxNormalFallSteps@i": -1,
+                    "lockTimeMSEC@i": 151,
+                    "minoKillTimeMSEC@i": 200,
+                    "suspendPieceActivity": false,
+                    "endCondition": {
+                      "type": "lineClears",
+                      "targetValue@i": 10
+                    },
+                    "dispatchLevelUpMessage": true,
+                    "postBreak": false
+                  },
+                  {
+                    "id": "30",
+                    "displayName": "30",
+                    "matrix": {
+                      "width@i": 10,
+                      "visibleHeight@i": 20,
+                      "skyBuffer@i": 4,
+                      "minos": []
+                    },
+                    "pieceBagStartingSequence": "",
+                    "pieceBagRefillValues": "I,J,L,O,S,T,Z",
+                    "pieceBagRefillMultiplier@i": 1,
+                    "resetNextQueue": false,
+                    "controls": "all",
+                    "generationTimeMSEC@i": 0,
+                    "normalFallSpeedMSECPerLine@i": 0,
+                    "softDropSpeedMSECPerLine@i": -20,
+                    "maxNormalFallSteps@i": -1,
+                    "lockTimeMSEC@i": 150,
+                    "minoKillTimeMSEC@i": 200,
+                    "suspendPieceActivity": false,
+                    "endCondition": {
+                      "type": "lineClears",
+                      "targetValue@i": 10
+                    },
+                    "dispatchLevelUpMessage": true,
+                    "postBreak": false
+                  }
+                ]
+              }
+            },
+            "battle": {
+              "enabled": false,
+              "params": {
+                "knockoutsLimit@i": 3,
+                "enableLineAttacks": true,
+                "enableCounterAttacks": true,
+                "lineAttackInsertionMSECPerLine@i": 50,
+                "awardedLinesForSingle@i": 0,
+                "awardedLinesForDouble@i": 1,
+                "awardedLinesForTriple@i": 2,
+                "awardedLinesForTetris@i": 4,
+                "awardedLinesForTSpin@i": 0,
+                "awardedLinesForTSpinSingle@i": 2,
+                "awardedLinesForTSpinDouble@i": 4,
+                "awardedLinesForTSpinTriple@i": 6,
+                "awardedLinesForMiniTSpin@i": 0,
+                "awardedLinesForMiniTSpinSingle@i": 0,
+                "awardedLinesForBackToBack@i": 1,
+                "awardedLinesForPerfectClear@i": 10,
+                "battleStatKeyPath": "player.totalMatrixMinoPatternMatches"
+              }
+            },
+            "turnBattle": {
+              "enabled": false,
+              "params": {
+                "numPiecesPerTurn@i": 1,
+                "refillNextQueueDuringTurn": true,
+                "timePerTurnMSEC@i": 5000,
+                "targetTimeForAttackMSEC@i": 15000,
+                "numLinesPerAttack@i": 2,
+                "postTurnDelayMSEC@i": 200
+              }
+            },
+            "digging": {
+              "enabled": false,
+              "params": {
+                "minVisibleGarbageRows@i": 5,
+                "rowInsertionMSECPerLine@i": 100,
+                "RNGSeed@i": 0,
+                "garbageContents": {
+                  "startMinHolesPerLine@i": 1,
+                  "startMaxHolesPerLine@i": 1,
+                  "endMinHolesPerLine@i": 1,
+                  "endMaxHolesPerLine@i": 1,
+                  "holesPerLineIncrementPerLineFXPT@i": 100
+                },
+                "gems": {
+                  "bonusTime": {
+                    "enabled": true,
+                    "bonusTimeSECPerGem@i": 5,
+                    "spawnByDepth": {
+                      "enabled": true,
+                      "depthStart@i": 5,
+                      "depthIncrement@i": 1
+                    }
+                  },
+                  "scoreMultiplier": {
+                    "enabled": true,
+                    "spawnByDepth": {
+                      "enabled": true,
+                      "depthStart@i": 10,
+                      "depthIncrement@i": 0
+                    },
+                    "spawnByTSpin": {
+                      "enabled": true,
+                      "multiplierEqualsLinesCleared": false
+                    }
+                  }
+                },
+                "overtimeShatter": {
+                  "enabled": true,
+                  "doCheckerboardKillMinos": false,
+                  "maxRemainingMinos@i": -1,
+                  "shatterTimePerMinoMSEC@i": 300,
+                  "delayPerMinoMSEC@i": 20
+                }
+              }
+            },
+            "RB01": {
+              "enabled": false,
+              "params": {
+                "RNGSeed@i": 0,
+                "itemsStartingLevel@i": 1,
+                "itemsStartingNumClearedLines@i": 5,
+                "minRowsForItemSpawning@i": 4,
+                "itemSpawnDelaySEC@i": 15,
+                "itemDespawnDelaySEC@i": 30,
+                "itemRespawnDelaySEC@i": 0,
+                "maxItemSpawnDepth@i": 8,
+                "maxAssistedItemRespawnDepth@i": 8,
+                "enableManualActivation": false,
+                "score": {
+                  "scoreForItemActivation@i": 1000,
+                  "scoreMultiplierIncrementForItemActivation@i": 1,
+                  "scoreMultiplierDecrementForItemDespawn@i": 1,
+                  "maxScoreMultiplier@i": 10
+                },
+                "actionsBag": { "bagSizeMultiplier@i": 2 },
+                "actions": {
+                  "fallSpeedUp": {
+                    "actionName": "FallSpeed",
+                    "maxRowsForItemSpawning@i": 10,
+                    "minLevel@i": 1,
+                    "maxLevel@i": 10,
+                    "bagFrequency@i": 1,
+                    "instanceParams": {
+                      "durationSEC@i": 10,
+                      "speedMultiplierFXPT@i": 250
+                    }
+                  },
+                  "fallSpeedDown": {
+                    "actionName": "FallSpeed",
+                    "maxRowsForItemSpawning@i": 0,
+                    "minLevel@i": 11,
+                    "maxLevel@i": 19,
+                    "bagFrequency@i": 1,
+                    "instanceParams": {
+                      "durationSEC@i": 10,
+                      "speedMultiplierFXPT@i": 4000
+                    }
+                  },
+                  "flip": {
+                    "actionName": "Flip",
+                    "maxRowsForItemSpawning@i": 0,
+                    "minLevel@i": 1,
+                    "maxLevel@i": 1000000,
+                    "bagFrequency@i": 1,
+                    "instanceParams": { "animationTimePerRowMSEC@i": 50 }
+                  },
+                  "obscure": {
+                    "actionName": "Obscure",
+                    "maxRowsForItemSpawning@i": 10,
+                    "minLevel@i": 1,
+                    "maxLevel@i": 1000000,
+                    "bagFrequency@i": 1,
+                    "instanceParams": {
+                      "pulsePeriodMSEC@i": 1500,
+                      "minObscurationFactorFXPT@i": 400,
+                      "maxObscurationFactorFXPT@i": 1600,
+                      "fadeToMaxTimeMSEC@i": 1000,
+                      "sustainAtMaxTimeMSEC@i": 5000,
+                      "fadeToNormalTimeMSEC@i": 1000
+                    }
+                  },
+                  "poke": {
+                    "actionName": "Poke",
+                    "maxRowsForItemSpawning@i": 0,
+                    "minLevel@i": 1,
+                    "maxLevel@i": 1000000,
+                    "bagFrequency@i": 1,
+                    "instanceParams": {
+                      "applyFromTop": false,
+                      "maxEffectRows@i": 4,
+                      "stepDelayMSEC@i": 200,
+                      "minoKillTimeMSEC@i": 300
+                    }
+                  },
+                  "press": {
+                    "actionName": "Press",
+                    "maxRowsForItemSpawning@i": 0,
+                    "minLevel@i": 1,
+                    "maxLevel@i": 1000000,
+                    "bagFrequency@i": 1,
+                    "instanceParams": {
+                      "stepDelayMSEC@i": 50,
+                      "directionType": "greatestEffect"
+                    }
+                  },
+                  "shift": {
+                    "actionName": "Shift",
+                    "maxRowsForItemSpawning@i": 0,
+                    "minLevel@i": 1,
+                    "maxLevel@i": 1000000,
+                    "bagFrequency@i": 1,
+                    "instanceParams": {
+                      "stepDelayMSEC@i": 50,
+                      "directionType": "greatestEffect"
+                    }
+                  },
+                  "garbage": {
+                    "actionName": "Garbage",
+                    "maxRowsForItemSpawning@i": 10,
+                    "minLevel@i": 1,
+                    "maxLevel@i": 1000000,
+                    "bagFrequency@i": 1,
+                    "instanceParams": {
+                      "numRowsToInsert@i": 4,
+                      "rowInsertionMSECPerLine@i": 100,
+                      "gapHeight@i": 2
+                    }
+                  },
+                  "flop": {
+                    "actionName": "Flop",
+                    "maxRowsForItemSpawning@i": 0,
+                    "minLevel@i": 1,
+                    "maxLevel@i": 1000000,
+                    "bagFrequency@i": 1,
+                    "instanceParams": { "animationTimePerColumnMSEC@i": 50 }
+                  }
+                }
+              }
+            },
+            "RBAPI": {
+              "enabled": false,
+              "params": {
+                "RBGameId": "RB01",
+                "musicPeriodSEC@i": 66,
+                "RB02": {
+                  "largePoints": { "maxScore@i": 100000, "maxTimeSEC@i": 600 }
+                }
+              }
+            }
+          }
+        },
+        "players": {
+          "player1": { "playerComponents": {} },
+          "player2": { "playerComponents": {} }
+        }
+      }
+    },
+    "gameView": {
+      "gameViewParams": {
+        "originX@f": 0.0,
+        "originY@f": 0.0,
+        "minos": {
+          "isVisualStickyEnabled": false,
+          "baseMinoTexture": {
+            "resource_texture": "project-Marathon/art/game/minos/mino-01-normal-~size-25~-{I,J,L,O,S,T,Z,garbage}.png"
+          },
+          "visualStates": {
+            "nextPiece": {
+              "resource_texture": "project-Marathon/art/game/minos/size-11/mino-plain-~size-11~-{I,J,L,O,S,T,Z,garbage}.png",
+              "alpha@f": 1.0
+            },
+            "livePiece": { "resource_texture": "", "alpha@f": 1.0 },
+            "ghostPiece": {
+              "resource_texture": "project-Marathon/art/game/minos/mino-01-ghost2-~size-25~-{I,J,L,O,S,T,Z,garbage}.png",
+              "alpha@f": 0.6
+            },
+            "holdPiece": {
+              "resource_texture": "project-Marathon/art/game/minos/size-11/mino-plain-~size-11~-{I,J,L,O,S,T,Z,garbage}.png",
+              "alpha@f": 1.0
+            },
+            "locked": {
+              "resource_texture": "project-Marathon/art/game/minos/mino-01-locked-~size-25~-{I,J,L,O,S,T,Z,garbage}.png",
+              "alpha@f": 1.0
+            },
+            "garbage": {
+              "resource_texture": "project-Marathon/art/game/minos/mino-01-locked-~size-25~-{garbage}.png",
+              "alpha@f": 1.0
+            },
+            "shattering": { "resource_texture": "", "alpha@f": 1.0 },
+            "shattered": { "resource_texture": "", "alpha@f": 1.0 },
+            "dying": {
+              "resource_texture": "project-Marathon/art/game/minos/mino-01-dying-~size-25~-{I,J,L,O,S,T,Z,garbage}.png",
+              "alpha@f": 0.5
+            }
+          },
+          "minoPlayerActionItems": { "enabled": false, "actionIds": {} }
+        },
+        "pauseButton": {
+          "enabled": true,
+          "transform": {
+            "width@f": 37.0,
+            "height@f": 37.0,
+            "x@f": 170.0,
+            "y@f": 277.0,
+            "anchorX@f": 0.5,
+            "anchorY@f": 0.5
+          },
+          "style": {
+            "frame": {
+              "textures": {
+                "texture:off-normal": {
+                  "resource_texture": "project-Marathon/art/ui/buttons/button-pause-normal.png",
+                  "alpha@f": 1.0
+                },
+                "texture:off-hover": {
+                  "resource_texture": "project-Marathon/art/ui/buttons/button-pause-hover.png",
+                  "alpha@f": 1.0
+                },
+                "texture:off-down": {
+                  "resource_texture": "project-Marathon/art/ui/buttons/button-pause-down.png",
+                  "alpha@f": 1.0
+                },
+                "texture:disabled": {
+                  "resource_texture": "project-Marathon/art/ui/buttons/button-pause-normal.png",
+                  "alpha@f": 0.5
+                }
+              }
+            }
+          }
+        },
+        "audioButton": {
+          "enabled": false,
+          "transform": {
+            "width@f": 40.0,
+            "height@f": 10.0,
+            "x@f": 350.0,
+            "y@f": 0.0,
+            "anchorX@f": 0.5,
+            "anchorY@f": 0.5
+          },
+          "style": {
+            "frame": {
+              "textures": {
+                "texture:off-normal": {
+                  "resource_texture": "project-Marathon/art/ui/buttons/button-audio-off-normal.png",
+                  "alpha@f": 1.0
+                },
+                "texture:off-hover": {
+                  "resource_texture": "project-Marathon/art/ui/buttons/button-audio-off-hover.png",
+                  "alpha@f": 1.0
+                },
+                "texture:off-down": {
+                  "resource_texture": "project-Marathon/art/ui/buttons/button-audio-off-down.png",
+                  "alpha@f": 1.0
+                },
+                "texture:on-normal": {
+                  "resource_texture": "project-Marathon/art/ui/buttons/button-audio-on-normal.png",
+                  "alpha@f": 1.0
+                },
+                "texture:on-hover": {
+                  "resource_texture": "project-Marathon/art/ui/buttons/button-audio-on-hover.png",
+                  "alpha@f": 1.0
+                },
+                "texture:on-down": {
+                  "resource_texture": "project-Marathon/art/ui/buttons/button-audio-on-down.png",
+                  "alpha@f": 1.0
+                },
+                "texture:disabled": {
+                  "resource_texture": "project-Marathon/art/ui/buttons/button-audio-off-normal.png",
+                  "alpha@f": 0.5
+                }
+              }
+            }
+          }
+        },
+        "debugMessages": {
+          "enabled": false,
+          "resource_font": "resources-shared/art/fonts/AvenirNextCondensed12-debug",
+          "maxLines@i": 20,
+          "horizontalAlignment@i": 1,
+          "verticalAlignment@i": 1,
+          "x@f": -395.0,
+          "y@f": -295.0
+        }
+      },
+      "playerViews": {
+        "playerView-base": {
+          "originX@f": 0.0,
+          "originY@f": 0.0,
+          "enableAnimations": true,
+          "background": {
+            "resource_texture": "",
+            "transform": {
+              "x@f": 0.0,
+              "y@f": 0.0,
+              "anchorX@f": 0.5,
+              "anchorY@f": 0.5
+            }
+          },
+          "matrix": {
+            "transform": {
+              "x@f": -1.0,
+              "y@f": -27.0,
+              "anchorX@f": 0.5,
+              "anchorY@f": 0.5
+            },
+            "background": {
+              "resource_texture": "project-Marathon/art/game/matrix.png",
+              "offsetX@f": 0.0,
+              "offsetY@f": -1.0,
+              "padding@f": 0.0
+            },
+            "dimmingForeground": {
+              "resource_texture": "",
+              "offsetX@f": 0.0,
+              "offsetY@f": 0.0,
+              "padding@f": 3.0,
+              "alpha@f": 0.8
+            },
+            "minoSpacing@f": 26.0,
+            "minoGapAdjust@f": 0.0,
+            "pointerInput": { "offsetX@f": 0.0, "offsetY@f": 0.0 },
+            "lockingMinoEffects": { "fadeToAlpha@f": 0.1 },
+            "postLockMinoEffects": { "blinkTimeMSEC@i": 200, "numBlinks@i": 0 },
+            "shatteringMinoEffects": { "numBlinks@i": 0 },
+            "dyingMinoEffects": { "fadeToAlpha@f": 0.0, "numBlinks@i": 0 }
+          },
+          "ghostPiece": { "enabled": true },
+          "nextQueue": {
+            "enabled": true,
+            "firstPieceCenterX@f": 173.0,
+            "firstPieceCenterY@f": 165.0,
+            "minoSpacing@f": 12.0,
+            "pieceSpacing@f": -60.0,
+            "maxNumVisiblePieces@i": 3
+          },
+          "holdPiece": {
+            "enabled": true,
+            "centerX@f": -174.0,
+            "centerY@f": 165.0,
+            "minoSpacing@f": 12.0
+          },
+          "scoreValue": {
+            "enabled": true,
+            "classId": "BPSTetBitmapTextView",
+            "positionX@f": 92.0,
+            "positionY@f": 269.0,
+            "scaleX@f": 1.0,
+            "scaleY@f": 1.0,
+            "BPSTetBitmapTextView": {
+              "resource_font": "project-Marathon/art/fonts/CenturyGothic20",
+              "horizontalAlignment": "right"
+            },
+            "autoStartAnimators": false,
+            "animators": {
+              "valueChanged": {
+                "globalDurationScale@f": 0.35,
+                "completionType": "none",
+                "channels": {
+                  "scaleXY": {
+                    "value@f": 1.3,
+                    "isValueRelative": false,
+                    "durationSEC@f": 1.0,
+                    "interpolationType": "Sin",
+                    "interpolationStrength@f": 1.0
+                  }
+                }
+              }
+            }
+          },
+          "scoreMultiplierValue": {
+            "enabled": false,
+            "classId": "BPSTetBitmapTextView",
+            "positionX@f": -256.0,
+            "positionY@f": 23.0,
+            "BPSTetBitmapTextView": {
+              "resource_font": "project-RedBull/RB01/art/fonts/AllRoundGothic-Demi-DigitsX-50",
+              "horizontalAlignment": "center"
+            },
+            "autoStartAnimators": false,
+            "animators": {
+              "kBPSTetScoreComponentMessageId_didIncreaseScoreMultiplier": {
+                "globalDurationScale@f": 0.5,
+                "completionType": "none",
+                "channels": {
+                  "scaleXY": {
+                    "value@f": 2.0,
+                    "isValueRelative": false,
+                    "durationSEC@f": 1.0,
+                    "interpolationType": "Sin",
+                    "interpolationStrength@f": 2.0
+                  }
+                }
+              },
+              "kBPSTetScoreComponentMessageId_didDecreaseScoreMultiplier": {
+                "globalDurationScale@f": 0.5,
+                "completionType": "none",
+                "channels": {
+                  "scaleXY": {
+                    "value@f": 0.5,
+                    "isValueRelative": false,
+                    "durationSEC@f": 1.0,
+                    "interpolationType": "Sin",
+                    "interpolationStrength@f": 2.0
+                  }
+                }
+              }
+            }
+          },
+          "levelValue": {
+            "enabled": true,
+            "classId": "BPSTetBitmapTextView",
+            "positionX@f": -175.0,
+            "positionY@f": 48.0,
+            "scaleX@f": 1.0,
+            "scaleY@f": 1.0,
+            "BPSTetBitmapTextView": {
+              "resource_font": "project-Marathon/art/fonts/CenturyGothic20",
+              "horizontalAlignment": "center"
+            },
+            "autoStartAnimators": false,
+            "animators": {
+              "valueChanged": {
+                "globalDurationScale@f": 0.5,
+                "completionType": "none",
+                "channels": {
+                  "scaleXY": {
+                    "value@f": 1.5,
+                    "isValueRelative": false,
+                    "durationSEC@f": 1.0,
+                    "interpolationType": "Sin",
+                    "interpolationStrength@f": 1.0
+                  }
+                }
+              }
+            }
+          },
+          "linesValue": {
+            "enabled": true,
+            "classId": "BPSTetBitmapTextView",
+            "positionX@f": -175.0,
+            "positionY@f": -9.0,
+            "scaleX@f": 1.0,
+            "scaleY@f": 1.0,
+            "BPSTetBitmapTextView": {
+              "resource_font": "project-Marathon/art/fonts/CenturyGothic20",
+              "horizontalAlignment": "center"
+            },
+            "autoStartAnimators": false,
+            "animators": {
+              "valueChanged": {
+                "globalDurationScale@f": 0.25,
+                "completionType": "none",
+                "channels": {
+                  "scaleXY": {
+                    "value@f": 1.5,
+                    "isValueRelative": false,
+                    "durationSEC@f": 1.0,
+                    "interpolationType": "Sin",
+                    "interpolationStrength@f": 1.0
+                  }
+                }
+              }
+            }
+          },
+          "levelRemainingActionGoalValueView": {
+            "enabled": false,
+            "classId": "BPSTetBitmapTextView",
+            "positionX@f": -256.0,
+            "positionY@f": -209.0,
+            "BPSTetBitmapTextView": {
+              "resource_font": "project-Marathon/art/fonts/CenturyGothic20",
+              "horizontalAlignment": "center"
+            }
+          },
+          "deepestLineClearValue": {
+            "enabled": false,
+            "classId": "BPSTetBitmapTextView",
+            "positionX@f": -256.0,
+            "positionY@f": -209.0,
+            "BPSTetBitmapTextView": {
+              "resource_font": "project-Marathon/art/fonts/CenturyGothic20",
+              "horizontalAlignment": "center"
+            }
+          },
+          "elapsedTimeValue": {
+            "enabled": false,
+            "classId": "BPSTetBitmapTextView",
+            "positionX@f": -256.0,
+            "positionY@f": -209.0,
+            "BPSTetBitmapTextView": {
+              "resource_font": "project-Marathon/art/fonts/CenturyGothic20",
+              "horizontalAlignment": "center"
+            }
+          },
+          "remainingTimeValue": {
+            "enabled": false,
+            "classId": "BPSTetBitmapTextView",
+            "positionX@f": -256.0,
+            "positionY@f": -209.0,
+            "BPSTetBitmapTextView": {
+              "resource_font": "project-Marathon/art/fonts/CenturyGothic20",
+              "horizontalAlignment": "center"
+            }
+          },
+          "knockouts": {
+            "enabled": false,
+            "firstCenterX@f": 0.0,
+            "firstCenterY@f": 0.0,
+            "spacing@f": 50.0,
+            "texture:alive": { "resource_texture": "" },
+            "texture:dead": { "resource_texture": "" }
+          },
+          "attackMeter": {
+            "enabled": false,
+            "firstCenterX@f": 0.0,
+            "firstCenterY@f": 0.0,
+            "spacing@f": -20.0,
+            "resource_texture": ""
+          },
+          "turnBattle": {
+            "turnTimer": {
+              "enabled": false,
+              "resource_texture": "project-TurnBattle/art/turnTimer.png",
+              "transform": {
+                "width@f": 16.0,
+                "height@f": 463.0,
+                "x@f": 233.0,
+                "y@f": -308.0,
+                "anchorX@f": 0.0,
+                "anchorY@f": 0.0
+              }
+            },
+            "turnWaitingDimmingForegroundAlpha@f": 0.5
+          },
+          "matrixOverlay": {
+            "enabled": true,
+            "x@f": 0.0,
+            "y@f": 0.0,
+            "countdownValue": {
+              "enabled": true,
+              "classId": "BPSTetBitmapTextView",
+              "positionX@f": 0.0,
+              "positionY@f": 0.0,
+              "scaleX@f": 0.5,
+              "scaleY@f": 0.5,
+              "BPSTetBitmapTextView": {
+                "resource_font": "project-Marathon/art/fonts/AvenirNextDemiBold100",
+                "horizontalAlignment": "center",
+                "startAnimatorsOnTextChanged": true
+              },
+              "animators": {
+                "valueChanged": {
+                  "globalDurationScale@f": 0.4,
+                  "completionType": "none",
+                  "channels": {
+                    "scaleXY": {
+                      "value@f": 1.2,
+                      "isValueRelative": false,
+                      "durationSEC@f": 1.0,
+                      "interpolationType": "OvershootOut",
+                      "interpolationStrength@f": 3.0
+                    }
+                  }
+                }
+              }
+            },
+            "message1": {
+              "enabled": false,
+              "classId": "BPSTetBitmapTextView",
+              "positionX@f": 0.0,
+              "positionY@f": 0.0,
+              "BPSTetBitmapTextView": {
+                "resource_font": "project-Marathon/art/fonts/CenturyGothic20",
+                "horizontalAlignment": "center"
+              },
+              "messages": {
+                "waiting": "READY?",
+                "ready": "READY!",
+                "won": "YOU WON!",
+                "lost": "YOU LOST!",
+                "tied": "YOU TIED!"
+              }
+            },
+            "message2": {
+              "enabled": false,
+              "transform": {
+                "x@f": 0.0,
+                "y@f": 0.0,
+                "anchorX@f": 0.5,
+                "anchorY@f": 0.5
+              },
+              "resource_texture": ""
+            },
+            "levelOverlay": {
+              "enabled": false,
+              "transform": {
+                "x@f": 0.0,
+                "y@f": 0.0,
+                "anchorX@f": 0.5,
+                "anchorY@f": 0.5
+              },
+              "resource_texture": ""
+            }
+          },
+          "holdButton": {
+            "enabled": true,
+            "transform": {
+              "width@f": 72.0,
+              "height@f": 227.0,
+              "x@f": -214.0,
+              "y@f": 320.0,
+              "anchorX@f": 0.0,
+              "anchorY@f": 1.0
+            },
+            "style": {
+              "frame": {
+                "textures": {
+                  "texture:off-normal": {
+                    "resource_texture": "project-Marathon/art/ui/frames/box-black.png",
+                    "alpha@f": 0.0
+                  },
+                  "texture:off-hover": {
+                    "resource_texture": "project-Marathon/art/ui/frames/box-black.png",
+                    "alpha@f": 0.0
+                  },
+                  "texture:off-down": {
+                    "resource_texture": "project-Marathon/art/ui/frames/box-black.png",
+                    "alpha@f": 0.0
+                  }
+                }
+              }
+            }
+          },
+          "viewMgr": {
+            "viewSchedulerPoolSize@i": 100,
+            "viewPools": {
+              "kBPSTetMatrixMessage_willKillMino": {
+                "enabled": true,
+                "initialCount@i": 40,
+                "autoRefillCount@i": 10,
+                "viewParams": {
+                  "classId": "BPSTetSpriteView",
+                  "scaleX@f": 1.0,
+                  "scaleY@f": 1.0,
+                  "anchorX@f": 0.5,
+                  "anchorY@f": 0.5,
+                  "alpha@f": 0.7,
+                  "BPSTetSpriteView": {
+                    "resource_texture": "project-Marathon/art/game/vfx/vfx-willKillMino.png"
+                  },
+                  "animators": {
+                    "animator1": {
+                      "globalDurationScale@f": 0.15,
+                      "indexDelaySEC@f": 0.025,
+                      "channels": {
+                        "scaleXY": {
+                          "value@f": 0.0,
+                          "isValueRelative": false,
+                          "durationSEC@f": 1.0,
+                          "interpolationType": "OvershootIn",
+                          "interpolationStrength@f": 3.0
+                        },
+                        "rotation": {
+                          "value@f": -180.0,
+                          "isValueRelative": true,
+                          "durationSEC@f": 1.0,
+                          "interpolationType": "Linear",
+                          "interpolationStrength@f": 1.0
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "kBPSTetStandardPlayerMessageId_willLockLivePieceIntoMatrix": {
+                "enabled": true,
+                "initialCount@i": 16,
+                "autoRefillCount@i": 4,
+                "viewParams": {
+                  "classId": "BPSTetSpriteView",
+                  "scaleX@f": 1.0,
+                  "scaleY@f": 1.0,
+                  "anchorX@f": 0.5,
+                  "anchorY@f": 0.5,
+                  "alpha@f": 0.5,
+                  "BPSTetSpriteView": {
+                    "resource_texture": "project-Marathon/art/game/vfx/vfx-minoLocked-01.png"
+                  },
+                  "animators": {
+                    "animator1": {
+                      "globalDurationScale@f": 0.1,
+                      "channels": {
+                        "alpha": {
+                          "value@f": 0.0,
+                          "isValueRelative": false,
+                          "durationSEC@f": 1.0,
+                          "interpolationType": "EaseIn",
+                          "interpolationStrength@f": 2.0
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "hardDropSparkle01": {
+                "enabled": true,
+                "initialCount@i": 80,
+                "autoRefillCount@i": 40,
+                "viewParams": {
+                  "classId": "BPSTetSpriteView",
+                  "scaleX@f": 0.15,
+                  "scaleY@f": 0.15,
+                  "anchorX@f": 0.5,
+                  "anchorY@f": 0.5,
+                  "alpha@f": 0.4,
+                  "BPSTetSpriteView": {
+                    "resource_texture": "project-Marathon/art/game/vfx/vfx-sparkle.png"
+                  },
+                  "animators": {
+                    "animator1": {
+                      "globalDurationScale@f": 0.6,
+                      "channels": {
+                        "positionY": {
+                          "value@f": 10.0,
+                          "isValueRelative": true,
+                          "durationSEC@f": 1.0,
+                          "interpolationType": "EaseOut",
+                          "interpolationStrength@f": 2.0
+                        },
+                        "scaleXY": {
+                          "value@f": 0.1,
+                          "isValueRelative": false,
+                          "durationSEC@f": 1.0,
+                          "interpolationType": "Linear",
+                          "interpolationStrength@f": 1.0
+                        },
+                        "rotation": {
+                          "value@f": 180.0,
+                          "isValueRelative": true,
+                          "durationSEC@f": 1.0,
+                          "interpolationType": "Linear",
+                          "interpolationStrength@f": 1.0
+                        },
+                        "alpha": {
+                          "value@f": 0.0,
+                          "isValueRelative": false,
+                          "durationSEC@f": 1.0,
+                          "interpolationType": "EaseIn",
+                          "interpolationStrength@f": 2.0
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "kBPSTetStandardPlayerMessageId_didHardDrop": {
+                "enabled": true,
+                "initialCount@i": 16,
+                "autoRefillCount@i": 4,
+                "viewParams": {
+                  "classId": "BPSTetSpriteView",
+                  "scaleX@f": 1.0,
+                  "scaleY@f": 1.0,
+                  "anchorX@f": 0.0,
+                  "anchorY@f": 0.0,
+                  "alpha@f": 0.5,
+                  "BPSTetSpriteView": {
+                    "resource_texture": "project-Marathon/art/game/vfx/vfx-hardDrop.png"
+                  },
+                  "animators": {
+                    "animator1": {
+                      "globalDurationScale@f": 0.5,
+                      "channels": {
+                        "scaleY": {
+                          "value@f": 1.0,
+                          "isValueRelative": false,
+                          "durationSEC@f": 1.0,
+                          "interpolationType": "Linear",
+                          "interpolationStrength@f": 1.0
+                        },
+                        "alpha": {
+                          "value@f": 0.0,
+                          "isValueRelative": false,
+                          "durationSEC@f": 1.0,
+                          "interpolationType": "Linear",
+                          "interpolationStrength@f": 1.0
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "scoreEventLineClear123": {
+                "enabled": true,
+                "initialCount@i": 2,
+                "autoRefillCount@i": 2,
+                "viewParams": {
+                  "classId": "BPSTetBitmapTextView",
+                  "anchorX@f": 0.5,
+                  "anchorY@f": 0.0,
+                  "scaleX@f": 0.5,
+                  "scaleY@f": 0.5,
+                  "alpha@f": 1.0,
+                  "BPSTetBitmapTextView": {
+                    "resource_font": "project-Marathon/art/fonts/AvenirNextBold18",
+                    "text": "FIXME"
+                  },
+                  "animators": {
+                    "animator1": {
+                      "globalDurationScale@f": 0.75,
+                      "channels": {
+                        "positionY": {
+                          "value@f": 110.0,
+                          "isValueRelative": true,
+                          "durationSEC@f": 1.0,
+                          "interpolationType": "OvershootOut",
+                          "interpolationStrength@f": 1.8
+                        },
+                        "scaleXY": {
+                          "value@f": 1.0,
+                          "isValueRelative": false,
+                          "durationSEC@f": 0.5,
+                          "interpolationType": "OvershootOut",
+                          "interpolationStrength@f": 3.0
+                        },
+                        "alpha": {
+                          "value@f": 0.0,
+                          "isValueRelative": false,
+                          "durationSEC@f": 1.0,
+                          "interpolationType": "EaseIn",
+                          "interpolationStrength@f": 5.0
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "scoreEventTetris01": {
+                "enabled": true,
+                "initialCount@i": 2,
+                "autoRefillCount@i": 2,
+                "viewParams": {
+                  "classId": "BPSTetBitmapTextView",
+                  "anchorX@f": 0.5,
+                  "anchorY@f": 0.0,
+                  "scaleX@f": 0.5,
+                  "scaleY@f": 0.5,
+                  "alpha@f": 1.0,
+                  "BPSTetBitmapTextView": {
+                    "resource_font": "project-Marathon/art/fonts/AvenirNextBold18",
+                    "text": "FIXME"
+                  },
+                  "animators": {
+                    "animator1": {
+                      "globalDurationScale@f": 0.75,
+                      "channels": {
+                        "positionY": {
+                          "value@f": 110.0,
+                          "isValueRelative": true,
+                          "durationSEC@f": 1.0,
+                          "interpolationType": "OvershootOut",
+                          "interpolationStrength@f": 1.8
+                        },
+                        "scaleXY": {
+                          "value@f": 1.0,
+                          "isValueRelative": false,
+                          "durationSEC@f": 0.5,
+                          "interpolationType": "OvershootOut",
+                          "interpolationStrength@f": 3.0
+                        },
+                        "alpha": {
+                          "value@f": 0.0,
+                          "isValueRelative": false,
+                          "durationSEC@f": 1.0,
+                          "interpolationType": "EaseIn",
+                          "interpolationStrength@f": 5.0
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "scoreEventPoints": {
+                "enabled": true,
+                "initialCount@i": 2,
+                "autoRefillCount@i": 2,
+                "viewParams": {
+                  "classId": "BPSTetBitmapTextView",
+                  "scaleX@f": 0.5,
+                  "scaleY@f": 0.5,
+                  "alpha@f": 1.0,
+                  "BPSTetBitmapTextView": {
+                    "resource_font": "project-Marathon/art/fonts/AvenirNextBold18",
+                    "text": "FIXME"
+                  },
+                  "animators": {
+                    "animator1": {
+                      "globalDurationScale@f": 0.7,
+                      "channels": {
+                        "positionY": {
+                          "value@f": 95.0,
+                          "isValueRelative": true,
+                          "durationSEC@f": 1.0,
+                          "interpolationType": "OvershootOut",
+                          "interpolationStrength@f": 1.8
+                        },
+                        "positionX": {
+                          "value@f": 0.0,
+                          "isValueRelative": true,
+                          "durationSEC@f": 1.0,
+                          "interpolationType": "Linear",
+                          "interpolationStrength@f": 2.0
+                        },
+                        "scaleXY": {
+                          "value@f": 0.8,
+                          "isValueRelative": false,
+                          "durationSEC@f": 0.5,
+                          "interpolationType": "EaseOut",
+                          "interpolationStrength@f": 2.0
+                        },
+                        "alpha": {
+                          "value@f": 0.0,
+                          "isValueRelative": false,
+                          "durationSEC@f": 1.0,
+                          "interpolationType": "EaseIn",
+                          "interpolationStrength@f": 3.0
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "levelUp02": {
+                "enabled": true,
+                "initialCount@i": 2,
+                "autoRefillCount@i": 2,
+                "viewParams": {
+                  "classId": "BPSTetBitmapTextView",
+                  "positionX@f": 0.0,
+                  "positionY@f": 0.0,
+                  "scaleX@f": 0.1,
+                  "scaleY@f": 0.1,
+                  "alpha@f": 1.0,
+                  "BPSTetBitmapTextView": {
+                    "resource_font": "project-Marathon/art/fonts/AvenirNextBold26",
+                    "text": "LEVEL UP!"
+                  },
+                  "animators": {
+                    "animator1": {
+                      "globalDurationScale@f": 1.0,
+                      "channels": {
+                        "positionY": {
+                          "value@f": 120.0,
+                          "isValueRelative": true,
+                          "durationSEC@f": 1.0,
+                          "interpolationType": "EaseOut",
+                          "interpolationStrength@f": 2.0
+                        },
+                        "scaleXY": {
+                          "value@f": 1.0,
+                          "isValueRelative": false,
+                          "durationSEC@f": 0.7,
+                          "interpolationType": "OvershootOut",
+                          "interpolationStrength@f": 2.5
+                        },
+                        "alpha": {
+                          "value@f": 0.0,
+                          "isValueRelative": false,
+                          "durationSEC@f": 1.0,
+                          "interpolationType": "EaseIn",
+                          "interpolationStrength@f": 6.0
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "playerViews": {
+          "player1": { "originX@f": 0.0, "originY@f": 0.0 },
+          "player2": { "originX@f": 0.0, "originY@f": 0.0 }
+        }
+      }
+    },
+    "gameAudio": {
+      "effects": {
+        "enabled": true,
+        "volume@f": 1.0,
+        "sounds": {
+          "topout": {
+            "resource_sound": "project-Marathon/sounds/sounds-01/blockout",
+            "requirePreload": false,
+            "volume@f": 1.0
+          },
+          "collapse": {
+            "resource_sound": "project-Marathon/sounds/sounds-01/collapse",
+            "requirePreload": true,
+            "volume@f": 1.0
+          },
+          "levelUp": {
+            "resource_sound": "project-Marathon/sounds/sounds-01/levelUp",
+            "requirePreload": false,
+            "volume@f": 1.0
+          },
+          "lineClear": {
+            "resource_sound": "project-Marathon/sounds/sounds-01/lineClear",
+            "requirePreload": true,
+            "volume@f": 1.0
+          },
+          "tetris": {
+            "resource_sound": "project-Marathon/sounds/sounds-01/tetris",
+            "requirePreload": false,
+            "volume@f": 1.0
+          },
+          "backToBackTetris": {
+            "resource_sound": "project-Marathon/sounds/sounds-01/backToBackTetris",
+            "requirePreload": false,
+            "volume@f": 1.0
+          },
+          "lock": {
+            "resource_sound": "project-Marathon/sounds/sounds-01/lock",
+            "requirePreload": true,
+            "volume@f": 1.0
+          },
+          "move": {
+            "resource_sound": "project-Marathon/sounds/sounds-01/move",
+            "requirePreload": true,
+            "volume@f": 1.0
+          },
+          "moveFailed": {
+            "resource_sound": "",
+            "requirePreload": true,
+            "volume@f": 1.0
+          },
+          "smartInputMove": {
+            "resource_sound": "project-Marathon/sounds/sounds-01/move",
+            "requirePreload": true,
+            "volume@f": 1.0
+          },
+          "rotate": {
+            "resource_sound": "project-Marathon/sounds/sounds-01/rotate",
+            "requirePreload": true,
+            "volume@f": 1.0
+          },
+          "rotateFailed": {
+            "resource_sound": "",
+            "requirePreload": true,
+            "volume@f": 1.0
+          },
+          "softDropStart": {
+            "resource_sound": "project-Marathon/sounds/sounds-01/move",
+            "requirePreload": true,
+            "volume@f": 1.0
+          },
+          "hardDrop": {
+            "resource_sound": "project-Marathon/sounds/sounds-01/hardDrop",
+            "requirePreload": true,
+            "volume@f": 1.0
+          },
+          "hold": {
+            "resource_sound": "project-Marathon/sounds/sounds-01/hold",
+            "requirePreload": true,
+            "volume@f": 1.0
+          },
+          "holdFailed": {
+            "resource_sound": "project-Marathon/sounds/sounds-01/inputFailed",
+            "requirePreload": true,
+            "volume@f": 1.0
+          },
+          "matrixVerticalShiftUp": {
+            "resource_sound": "",
+            "requirePreload": true,
+            "volume@f": 1.0
+          },
+          "win": {
+            "resource_sound": "project-Marathon/sounds/sounds-01/win",
+            "requirePreload": false,
+            "volume@f": 1.0
+          },
+          "lose": {
+            "resource_sound": "",
+            "requirePreload": false,
+            "volume@f": 1.0
+          },
+          "multiplierDown": {
+            "resource_sound": "",
+            "requirePreload": false,
+            "volume@f": 1.0
+          },
+          "actionItemSpeedUp": {
+            "resource_sound": "",
+            "requirePreload": false,
+            "volume@f": 1.0
+          },
+          "actionItemSpeedDown": {
+            "resource_sound": "",
+            "requirePreload": false,
+            "volume@f": 1.0
+          },
+          "actionItemFlip": {
+            "resource_sound": "",
+            "requirePreload": false,
+            "volume@f": 1.0
+          },
+          "actionItemFlop": {
+            "resource_sound": "",
+            "requirePreload": false,
+            "volume@f": 1.0
+          },
+          "actionItemGarbage": {
+            "resource_sound": "",
+            "requirePreload": false,
+            "volume@f": 1.0
+          },
+          "actionItemObscure": {
+            "resource_sound": "",
+            "requirePreload": false,
+            "volume@f": 1.0
+          },
+          "actionItemPoke": {
+            "resource_sound": "",
+            "requirePreload": false,
+            "volume@f": 1.0
+          },
+          "actionItemPokeKillMino": {
+            "resource_sound": "",
+            "requirePreload": false,
+            "volume@f": 1.0
+          },
+          "actionItemPressToCenter": {
+            "resource_sound": "",
+            "requirePreload": false,
+            "volume@f": 1.0
+          },
+          "actionItemPressToSides": {
+            "resource_sound": "",
+            "requirePreload": false,
+            "volume@f": 1.0
+          },
+          "actionItemShift": {
+            "resource_sound": "",
+            "requirePreload": false,
+            "volume@f": 1.0
+          }
+        }
+      },
+      "metaEffects": {
+        "enabled": true,
+        "volume@f": 1.0,
+        "sounds": {
+          "countdown": {
+            "resource_sound": "",
+            "requirePreload": true,
+            "volume@f": 1.0
+          }
+        }
+      },
+      "music": {
+        "enabled": true,
+        "volume@f": 1.0,
+        "maxFileIndex@i": 3,
+        "selectedFileIndex@i": 1,
+        "sounds": {
+          "1": {
+            "resource_music": "project-Marathon/music/remote/Korobeiniki-FVR-01",
+            "requirePreload": false,
+            "volume@f": 1.0
+          },
+          "2": {
+            "resource_music": "project-Marathon/music/remote/Korobeiniki-BR-01",
+            "requirePreload": false,
+            "volume@f": 1.0
+          },
+          "3": {
+            "resource_music": "project-Marathon/music/remote/Korobeiniki-CN-01",
+            "requirePreload": false,
+            "volume@f": 1.0
+          }
+        }
+      }
+    }
+  }
+}

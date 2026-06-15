@@ -7,7 +7,9 @@ const prettier = require("prettier");
 const FILES = {
   "N-Blox": "BPSTetrisGame-FTO.json",
   "Main Game": "defaultTPF.json",
+  "Main Game Mobile": "defaultTPF-mobile.json",
   "Mind Bender": "project-MindBender.json",
+  "Mind Bender Mobile": "project-MindBender-mobile.json",
   E60: "project-E60.json",
 };
 
