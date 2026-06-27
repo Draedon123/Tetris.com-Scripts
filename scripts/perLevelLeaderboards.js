@@ -5,11 +5,15 @@
  */
 
 (() => {
-  const mBPSApp = document.getElementById("gameIFrame").contentWindow.mBPSApp;
+  const mBPSApp = document.querySelector(
+    "iframe[title='Tetris Game'], #gameIFrame",
+  ).contentWindow.mBPSApp;
   const highScoreManager = mBPSApp.mHighScoresMgr;
   const mainMenu = mBPSApp.mSceneMgr.getManagedScene("mainMenu");
   const options = mBPSApp.mSceneMgr.getManagedScene("options");
   const originalSetLevelIndex = mainMenu.setStartingLevelIndex.bind(mainMenu);
+  const originalSaveOptions =
+    options.saveLocalValuesToPrefsAndDispatch.bind(options);
   const originalSavedDataId = mBPSApp.getSavedDataId();
   const validLevels = [1, 5, 10, 15, 20, 25, 30];
 
@@ -34,12 +38,12 @@
     highScoreManager.loadHighScoresFromPrefs();
   };
 
-  options.x3765534826241065107x = () => {
+  options.saveLocalValuesToPrefsAndDispatch = () => {
     const currentSavedDataId = savedDataId;
 
     for (const level of validLevels) {
       savedDataId = getSavedDataIdFromLevel(level);
-      options.saveLocalValuesToPrefsAndDispatch();
+      originalSaveOptions();
     }
 
     savedDataId = currentSavedDataId;
